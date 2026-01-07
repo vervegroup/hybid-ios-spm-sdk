@@ -17,13 +17,11 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "HyBid",
-            url: "https://github.com/pubnative/pubnative-hybid-ios-sdk/releases/download/3.7.1/HyBid.xcframework.zip",
-            checksum: "eb3b53b3176973e0f3b6973d68ae89e094e07fdcda681b918921ccde27c2c0ae"
+            path: "HyBid.xcframework"
         ),
         .binaryTarget(
             name: "OMSDK_Pubnativenet",
-            url: "https://github.com/pubnative/pubnative-hybid-ios-sdk/releases/download/3.7.1/HyBid.xcframework.zip",
-            checksum: "eb3b53b3176973e0f3b6973d68ae89e094e07fdcda681b918921ccde27c2c0ae" 
+            path: "OMSDK_Pubnativenet.xcframework"
         )
     ]
 )
