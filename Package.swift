@@ -14,6 +14,9 @@ let package = Package(
             targets: ["HyBid", "OMSDK_Pubnativenet"]
         ),
     ],
+    dependencies: [
+        .package(url: "https://github.com/pubnative/ATOM.git", branch: "support-spm")
+    ],
     targets: [
         .binaryTarget(
             name: "HyBid",
