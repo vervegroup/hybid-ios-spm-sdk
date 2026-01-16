@@ -13,7 +13,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/pubnative/ATOM.git", branch: "support-spm")
+        .package(url: "https://github.com/pubnative/ATOM.git", branch: "main")
     ],
     targets: [
         .binaryTarget(
