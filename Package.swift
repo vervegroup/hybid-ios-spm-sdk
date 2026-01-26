@@ -14,7 +14,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/pubnative/ATOM.git", from: "3.8.0-spm.1")
+        .package(url: "https://github.com/pubnative/ATOM.git", exact: "3.8.0-spm.2")
     ],
     targets: [
         .binaryTarget(
