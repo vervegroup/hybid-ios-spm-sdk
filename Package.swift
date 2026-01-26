@@ -1,4 +1,5 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.9
+
 import PackageDescription
 
 let package = Package(
@@ -13,7 +14,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/pubnative/ATOM.git", branch: "main")
+        .package(url: "https://github.com/pubnative/ATOM.git", from: "3.8.0-spm.1")
     ],
     targets: [
         .binaryTarget(
