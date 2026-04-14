@@ -638,6 +638,29 @@ SWIFT_CLASS("_TtC5HyBid25HyBidAppImpressionWrapper")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+SWIFT_CLASS_NAMED("HyBidBeaconItem")
+@interface HyBidBeaconItem : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull type;
+@property (nonatomic, readonly, copy) NSString * _Nullable url;
+@property (nonatomic, readonly, copy) NSString * _Nullable js;
+@property (nonatomic, readonly, copy) NSString * _Nonnull content;
+- (nonnull instancetype)initWithType:(NSString * _Nonnull)type url:(NSString * _Nullable)url js:(NSString * _Nullable)js OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS_NAMED("HyBidBeaconsInspector")
+@interface HyBidBeaconsInspector : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) HyBidBeaconsInspector * _Nonnull shared;)
++ (HyBidBeaconsInspector * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (void)setResponseForBeaconsInspector:(NSString * _Nullable)response;
+- (NSArray<HyBidBeaconItem *> * _Nonnull)firedBeacons SWIFT_WARN_UNUSED_RESULT;
+- (void)adBeaconsFromLastResponseWithCompletion:(void (^ _Nonnull)(NSArray<HyBidBeaconItem *> * _Nonnull))completion;
+- (void)adBeaconsFromResponse:(NSString * _Nullable)response completion:(void (^ _Nonnull)(NSArray<HyBidBeaconItem *> * _Nonnull))completion;
+@end
+
 enum HyBidCTASize : int32_t;
 enum HyBidCTALocation : int32_t;
 @class UIImage;
@@ -717,6 +740,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 + (NSString * _Nonnull)HYBID_DEEPLINK_PARAM SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull HYBID_FALLBACK_PARAM;)
 + (NSString * _Nonnull)HYBID_FALLBACK_PARAM SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull ATOM_SURVEY_PARAM;)
++ (NSString * _Nonnull)ATOM_SURVEY_PARAM SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull ATOM_SURVEY_DATA_PARAM;)
++ (NSString * _Nonnull)ATOM_SURVEY_DATA_PARAM SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull ATOM_KEY_PREFIX;)
++ (NSString * _Nonnull)ATOM_KEY_PREFIX SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL mraidExpand;)
 + (BOOL)mraidExpand SWIFT_WARN_UNUSED_RESULT;
 + (void)setMraidExpand:(BOOL)value;
@@ -783,6 +812,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull itun
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull customCTAInputValue;)
 + (NSString * _Nonnull)customCTAInputValue SWIFT_WARN_UNUSED_RESULT;
 + (void)setCustomCTAInputValue:(NSString * _Nonnull)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) BOOL customCtaEnabledInputValue;)
++ (BOOL)customCtaEnabledInputValue SWIFT_WARN_UNUSED_RESULT;
++ (void)setCustomCtaEnabledInputValue:(BOOL)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) NSInteger customCtaDelayInputValue;)
++ (NSInteger)customCtaDelayInputValue SWIFT_WARN_UNUSED_RESULT;
++ (void)setCustomCtaDelayInputValue:(NSInteger)value;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull customBundleId;)
 + (NSString * _Nonnull)customBundleId SWIFT_WARN_UNUSED_RESULT;
 + (void)setCustomBundleId:(NSString * _Nonnull)value;
@@ -801,6 +836,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull ctaS
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull ctaLocationTypeInputValue;)
 + (NSString * _Nonnull)ctaLocationTypeInputValue SWIFT_WARN_UNUSED_RESULT;
 + (void)setCtaLocationTypeInputValue:(NSString * _Nonnull)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) NSInteger sdkAutoStoreKitDelayInputValue;)
++ (NSInteger)sdkAutoStoreKitDelayInputValue SWIFT_WARN_UNUSED_RESULT;
++ (void)setSdkAutoStoreKitDelayInputValue:(NSInteger)value;
 + (HyBidSkipOffset * _Nonnull)endCardCloseOffsetWithAdExperience:(NSString * _Nullable)adExperience SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -948,12 +986,14 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) HyBidInterru
 - (void)adFeedbackViewDidDismiss;
 @end
 
+@class NSData;
 @protocol HyBidInterstitialAdDelegate;
 SWIFT_CLASS("_TtC5HyBid19HyBidInterstitialAd")
 @interface HyBidInterstitialAd : NSObject
 @property (nonatomic, strong) HyBidAd * _Nullable ad;
 @property (nonatomic) BOOL isReady;
 @property (nonatomic) BOOL isMediation;
+@property (nonatomic, copy) NSData * _Nullable mediationWatermarkData;
 @property (nonatomic) BOOL isAutoCacheOnLoad;
 - (nonnull instancetype)initWithDelegate:(id <HyBidInterstitialAdDelegate> _Nonnull)delegate;
 - (nonnull instancetype)initWithZoneID:(NSString * _Nullable)zoneID andWithDelegate:(id <HyBidInterstitialAdDelegate> _Nonnull)delegate;
@@ -971,6 +1011,7 @@ SWIFT_CLASS("_TtC5HyBid19HyBidInterstitialAd")
 - (void)show;
 - (void)showFromViewController:(UIViewController * _Nonnull)viewController;
 - (void)renderAdWithAd:(HyBidAd * _Nonnull)ad;
+- (void)setMediationWatermark:(NSData * _Nullable)pngData;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1014,6 +1055,7 @@ SWIFT_CLASS("_TtC5HyBid11HyBidLogger")
 + (void)warningLogFromClass:(NSString * _Nonnull)className fromMethod:(NSString * _Nonnull)fromMethod withMessage:(NSString * _Nonnull)withMessage;
 + (void)infoLogFromClass:(NSString * _Nonnull)className fromMethod:(NSString * _Nonnull)fromMethod withMessage:(NSString * _Nonnull)withMessage;
 + (void)debugLogFromClass:(NSString * _Nonnull)className fromMethod:(NSString * _Nonnull)fromMethod withMessage:(NSString * _Nonnull)withMessage;
++ (void)atomLogFromClass:(NSString * _Nonnull)className fromMethod:(NSString * _Nonnull)fromMethod withMessage:(NSString * _Nonnull)withMessage;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1123,6 +1165,7 @@ SWIFT_CLASS("_TtC5HyBid15HyBidRewardedAd")
 @property (nonatomic, strong) HyBidAd * _Nullable ad;
 @property (nonatomic) BOOL isReady;
 @property (nonatomic) BOOL isMediation;
+@property (nonatomic, copy) NSData * _Nullable mediationWatermarkData;
 @property (nonatomic) BOOL isAutoCacheOnLoad;
 - (nonnull instancetype)initWithDelegate:(id <HyBidRewardedAdDelegate> _Nonnull)delegate;
 - (nonnull instancetype)initWithZoneID:(NSString * _Nullable)zoneID andWithDelegate:(id <HyBidRewardedAdDelegate> _Nonnull)delegate;
@@ -1139,6 +1182,7 @@ SWIFT_CLASS("_TtC5HyBid15HyBidRewardedAd")
 - (void)show;
 - (void)showFromViewController:(UIViewController * _Nonnull)viewController;
 - (void)renderAdWithAd:(HyBidAd * _Nonnull)ad;
+- (void)setMediationWatermark:(NSData * _Nullable)pngData;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1376,7 +1420,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) HyBidViewbil
 @class UITouch;
 @class UIEvent;
 @interface SKStoreProductViewController (SWIFT_EXTENSION(HyBid))
-- (void)viewDidAppear:(BOOL)animated;
 - (void)dismissViewControllerAnimated:(BOOL)flag completion:(void (^ _Nullable)(void))completion;
 - (void)viewDidDisappear:(BOOL)animated;
 - (void)touchesBegan:(NSSet<UITouch *> * _Nonnull)touches withEvent:(UIEvent * _Nullable)event;

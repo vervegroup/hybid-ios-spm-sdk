@@ -22,12 +22,13 @@ import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
 @_inheritsConvenienceInitializers @objc public class HyBidLogger : ObjectiveC.NSObject {
-  public static var logLevel: HyBid.HyBidLogLevel
+  nonisolated(unsafe) public static var logLevel: HyBid.HyBidLogLevel
   @objc(setLogLevel:) public static func setLogLevel(_ logLevel: HyBid.HyBidLogLevel)
   @objc public static func errorLog(fromClass className: Swift.String, fromMethod: Swift.String, withMessage: Swift.String)
   @objc public static func warningLog(fromClass className: Swift.String, fromMethod: Swift.String, withMessage: Swift.String)
   @objc public static func infoLog(fromClass className: Swift.String, fromMethod: Swift.String, withMessage: Swift.String)
   @objc public static func debugLog(fromClass className: Swift.String, fromMethod: Swift.String, withMessage: Swift.String)
+  @objc public static func atomLog(fromClass className: Swift.String, fromMethod: Swift.String, withMessage: Swift.String)
   @objc override dynamic public init()
   @objc deinit
 }
@@ -88,6 +89,30 @@ extension HyBid.HyBidMRAIDCloseCardView : HyBid.HyBidContentInfoViewDelegate {
   #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc dynamic public func contentInfoViewWidthNeedsUpdate(_ width: Foundation.NSNumber!)
   #endif
+}
+@objc(HyBidBeaconItem) public class HyBidBeaconItem : ObjectiveC.NSObject {
+  @objc final public let type: Swift.String
+  @objc final public let url: Swift.String?
+  @objc final public let js: Swift.String?
+  @objc public var content: Swift.String {
+    @objc get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public init(type: Swift.String, url: Swift.String?, js: Swift.String?)
+  #endif
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(HyBidBeaconsInspector) public class HyBidBeaconsInspector : ObjectiveC.NSObject {
+  @objc public static let shared: HyBid.HyBidBeaconsInspector
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func setResponseForBeaconsInspector(_ response: Swift.String?)
+  #endif
+  @objc public func firedBeacons() -> [HyBid.HyBidBeaconItem]
+  @objc public func adBeaconsFromLastResponse(completion: @escaping ([HyBid.HyBidBeaconItem]) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func adBeacons(fromResponse response: Swift.String?, completion: @escaping ([HyBid.HyBidBeaconItem]) -> Swift.Void)
+  #endif
+  @objc deinit
 }
 @objc public protocol HyBidReportingDelegate {
   @objc func onEvent(with event: HyBid.HyBidReportingEvent)
@@ -290,7 +315,6 @@ extension HyBid.HyBidSKAdNetworkViewController : StoreKit.SKStoreProductViewCont
   @objc dynamic public func productViewControllerDidFinish(_ viewController: StoreKit.SKStoreProductViewController)
 }
 extension StoreKit.SKStoreProductViewController {
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
   #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func dismiss(animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
   #endif
@@ -455,6 +479,9 @@ extension StoreKit.SKStoreProductViewController {
   @objc public static let HYBID_DEEPLINK_SCHEME: Swift.String
   @objc public static let HYBID_DEEPLINK_PARAM: Swift.String
   @objc public static let HYBID_FALLBACK_PARAM: Swift.String
+  @objc public static let ATOM_SURVEY_PARAM: Swift.String
+  @objc public static let ATOM_SURVEY_DATA_PARAM: Swift.String
+  @objc public static let ATOM_KEY_PREFIX: Swift.String
   @objc public static var mraidExpand: Swift.Bool
   @objc public static var showEndCard: Swift.Bool
   @objc public static var showCustomEndCard: Swift.Bool
@@ -477,12 +504,15 @@ extension StoreKit.SKStoreProductViewController {
   @objc public static var skAdNetworkModelInputValue: Foundation.NSDictionary
   @objc public static var itunesIdValue: Swift.String
   @objc public static var customCTAInputValue: Swift.String
+  @objc public static var customCtaEnabledInputValue: Swift.Bool
+  @objc public static var customCtaDelayInputValue: Swift.Int
   @objc public static var customBundleId: Swift.String
   @objc public static var iconSizeReducedInputValue: Swift.Bool
   @objc public static var navigationModeInputValue: Swift.String
   @objc public static var landingPageInputValue: Swift.Bool
   @objc public static var ctaSizeTypeInputValue: Swift.String
   @objc public static var ctaLocationTypeInputValue: Swift.String
+  @objc public static var sdkAutoStoreKitDelayInputValue: Swift.Int
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func endCardCloseOffset(adExperience: Swift.String?) -> HyBid.HyBidSkipOffset
   #endif
@@ -538,6 +568,7 @@ extension HyBid.HyBidCustomCTAView : HyBid.HyBidInterruptionDelegate {
   @objc public var ad: HyBid.HyBidAd?
   @objc public var isReady: Swift.Bool
   @objc public var isMediation: Swift.Bool
+  @objc public var mediationWatermarkData: Foundation.Data?
   @objc public var isAutoCacheOnLoad: Swift.Bool {
     @objc get
     @objc set
@@ -562,6 +593,9 @@ extension HyBid.HyBidCustomCTAView : HyBid.HyBidInterruptionDelegate {
   @objc public func show()
   @objc(showFromViewController:) public func show(from viewController: UIKit.UIViewController)
   @objc public func renderAd(ad: HyBid.HyBidAd)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(setMediationWatermark:) public func setMediationWatermark(_ pngData: Foundation.Data?)
+  #endif
   @objc override dynamic public init()
   @objc deinit
 }
@@ -642,6 +676,7 @@ extension HyBid.HyBidInterruptionHandler {
   @objc public var ad: HyBid.HyBidAd?
   @objc public var isReady: Swift.Bool
   @objc public var isMediation: Swift.Bool
+  @objc public var mediationWatermarkData: Foundation.Data?
   @objc public var isAutoCacheOnLoad: Swift.Bool {
     @objc get
     @objc set
@@ -665,6 +700,9 @@ extension HyBid.HyBidInterruptionHandler {
   @objc public func show()
   @objc(showFromViewController:) public func show(from viewController: UIKit.UIViewController)
   @objc public func renderAd(ad: HyBid.HyBidAd)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(setMediationWatermark:) public func setMediationWatermark(_ pngData: Foundation.Data?)
+  #endif
   @objc override dynamic public init()
   @objc deinit
 }
