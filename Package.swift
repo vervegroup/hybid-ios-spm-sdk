@@ -11,10 +11,21 @@ let package = Package(
         .library(
             name: "HyBid",
             targets: ["HyBidDependencies"]
+        ),
+        .library(
+            name: "GoogleMobileAdsHyBidAdapters",
+            targets: ["GoogleMobileAdsHyBidAdapters"]
+        ),
+        .library(
+            name: "IronSourceHyBidAdapters",
+            targets: ["IronSourceHyBidAdapters"]
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/pubnative/ATOM.git", from: "3.9.0")
+        .package(url: "https://github.com/pubnative/ATOM.git", from: "3.9.0"),
+        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", from: "13.0.0"),
+        .package(url: "https://github.com/ironsource-mobile/Unity-Mediation-iAds-Swift-Package.git", .upToNextMajor(from: "9.3.0")),
+        .package(url: "https://github.com/ironsource-mobile/Unity-Ad-Quality-Swift-Package.git", .upToNextMajor(from: "9.2.1"))
     ],
     targets: [
         .binaryTarget(
@@ -33,6 +44,40 @@ let package = Package(
                 .product(name: "ATOM", package: "ATOM")
             ],
             path: "Sources"
+        ),
+        .target(
+            name: "GoogleMobileAdsHyBidAdapters",
+            dependencies: [
+                "HyBidDependencies",
+                .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads")
+            ],
+            path: "GoogleMobileAdsAdapters",
+            publicHeadersPath: ".",
+            cSettings: [
+                .headerSearchPath("."),
+                .headerSearchPath("GAD"),
+                .headerSearchPath("GAM")
+            ]
+        ),
+        .target(
+            name: "IronSourceHyBidAdapters",
+            dependencies: [
+                "HyBidDependencies",
+                .product(name: "UnityMediationSDK", package: "Unity-Mediation-iAds-Swift-Package"),
+                .product(name: "AdQuality", package: "Unity-Ad-Quality-Swift-Package")
+            ],
+            path: "ironSourceAdapters",
+            sources: [
+                "ISVerveCustomAdapter.m",
+                "ISVerveCustomBanner.m",
+                "ISVerveCustomInterstitial.m",
+                "ISVerveCustomRewardedVideo.m",
+                "ISVerveUtils.m"
+            ],
+            publicHeadersPath: ".",
+            cSettings: [
+                .headerSearchPath(".")
+            ]
         )
     ]
 )

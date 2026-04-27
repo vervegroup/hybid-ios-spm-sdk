@@ -1,0 +1,50 @@
+{
+  "pins" : [
+    {
+      "identity" : "atom",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pubnative/ATOM.git",
+      "state" : {
+        "revision" : "07be7b4f175035e6c6b72f564ac1a59380fdc981",
+        "version" : "3.9.0"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-mobile-ads",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
+      "state" : {
+        "revision" : "8d08e4396ea955a7d2baf067c0eedfc34ca0821d",
+        "version" : "13.2.0"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-user-messaging-platform",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git",
+      "state" : {
+        "revision" : "708a282840c2171ee63bd93b87afa49fe507d70e",
+        "version" : "2.7.0"
+      }
+    },
+    {
+      "identity" : "unity-ad-quality-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ironsource-mobile/Unity-Ad-Quality-Swift-Package.git",
+      "state" : {
+        "revision" : "4fa6b6029e4489ae489216108c4f7ed8378bca9d",
+        "version" : "9.4.0"
+      }
+    },
+    {
+      "identity" : "unity-mediation-iads-swift-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ironsource-mobile/Unity-Mediation-iAds-Swift-Package.git",
+      "state" : {
+        "revision" : "2ee002119191ac75ec515a5cb9f3eec0f94d0e8f",
+        "version" : "9.4.0"
+      }
+    }
+  ],
+  "version" : 2
+}
