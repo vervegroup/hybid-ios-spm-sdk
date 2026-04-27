@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "HyBid",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v12)
     ],
     products: [
         .library(
@@ -27,7 +27,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/pubnative/ATOM.git", from: "3.9.0"),
-        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", from: "13.0.0"),
+        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", exact: "12.14.0"),
         .package(url: "https://github.com/ironsource-mobile/Unity-Mediation-iAds-Swift-Package.git", .upToNextMajor(from: "9.3.0")),
         .package(url: "https://github.com/ironsource-mobile/Unity-Ad-Quality-Swift-Package.git", .upToNextMajor(from: "9.2.1")),
         .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", .upToNextMajor(from: "13.0.0"))
