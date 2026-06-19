@@ -7,5 +7,4 @@ framework module HyBid {
 
 module HyBid.Swift {
   header "HyBid-Swift.h"
-  requires objc
 }
