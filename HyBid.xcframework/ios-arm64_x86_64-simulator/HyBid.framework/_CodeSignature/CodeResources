@@ -338,11 +338,11 @@
 		</data>
 		<key>Modules/HyBid.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		uHGxnECcdimGvO9OQ9SP8ZZQ7T8=
+		SOZv/xRNnA56NuUue+XsVm6HqC0=
 		</data>
 		<key>Modules/HyBid.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		xAbs0Gnb7BZGYoqw2wXvlbgu3Qg=
+		zWMQS5FaDyf+76UEiEQcfBAraeA=
 		</data>
 		<key>Modules/HyBid.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -1362,14 +1362,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6cggdVrDtgr7jrWZUXsLQMRncZ0j5jJ1AMsppvMtZlU=
+			jkaq8LYADCquE750oG8iLbFcgOX1//lZc1YdqVzUlnA=
 			</data>
 		</dict>
 		<key>Modules/HyBid.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4hbvu4T84smyjHVRjMKrug5qBKzpf8BNRmf5CH3wpPw=
+			uNDCB1IB7UBw6LvpnVXcJ4cyFQ35G+UygeB0YN+cmWQ=
 			</data>
 		</dict>
 		<key>Modules/HyBid.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
