@@ -13,9 +13,6 @@ let package = Package(
             targets: ["HyBidDependencies"]
         )
     ],
-    dependencies: [
-        .package(url: "https://github.com/pubnative/ATOM.git", from: "3.9.0")
-    ],
     targets: [
         .binaryTarget(
             name: "HyBidBinary",
@@ -29,8 +26,7 @@ let package = Package(
             name: "HyBidDependencies",
             dependencies: [
                 "HyBidBinary",
-                "OMSDK_Pubnativenet",
-                .product(name: "ATOM", package: "ATOM")
+                "OMSDK_Pubnativenet"
             ],
             path: "Sources"
         )
