@@ -10280,12 +10280,9 @@
             "mangledName": "$s5HyBid0aB14SessionManagerC17impressionCounterSDySSSiGvp",
             "moduleName": "HyBid",
             "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
               "AccessControl",
               "ObjC"
             ],
-            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -10317,7 +10314,6 @@
                 "usr": "c:@M@HyBid@objc(cs)HyBidSessionManager(im)impressionCounter",
                 "mangledName": "$s5HyBid0aB14SessionManagerC17impressionCounterSDySSSiGvg",
                 "moduleName": "HyBid",
-                "implicit": true,
                 "declAttributes": [
                   "ObjC"
                 ],
@@ -10358,7 +10354,6 @@
                 "usr": "c:@M@HyBid@objc(cs)HyBidSessionManager(im)setImpressionCounter:",
                 "mangledName": "$s5HyBid0aB14SessionManagerC17impressionCounterSDySSSiGvs",
                 "moduleName": "HyBid",
-                "implicit": true,
                 "declAttributes": [
                   "ObjC"
                 ],
@@ -10401,12 +10396,9 @@
             "mangledName": "$s5HyBid0aB14SessionManagerC15sessionDurationSSvp",
             "moduleName": "HyBid",
             "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
               "AccessControl",
               "ObjC"
             ],
-            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -10424,7 +10416,6 @@
                 "usr": "c:@M@HyBid@objc(cs)HyBidSessionManager(im)sessionDuration",
                 "mangledName": "$s5HyBid0aB14SessionManagerC15sessionDurationSSvg",
                 "moduleName": "HyBid",
-                "implicit": true,
                 "declAttributes": [
                   "ObjC"
                 ],
@@ -10451,7 +10442,6 @@
                 "usr": "c:@M@HyBid@objc(cs)HyBidSessionManager(im)setSessionDuration:",
                 "mangledName": "$s5HyBid0aB14SessionManagerC15sessionDurationSSvs",
                 "moduleName": "HyBid",
-                "implicit": true,
                 "declAttributes": [
                   "ObjC"
                 ],
@@ -37781,14 +37771,14 @@
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidSessionManager.swift",
       "kind": "Dictionary",
-      "offset": 395,
+      "offset": 391,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidSessionManager.swift",
       "kind": "StringLiteral",
-      "offset": 446,
+      "offset": 438,
       "length": 2,
       "value": "\"\""
     },
@@ -37888,14 +37878,14 @@
       "kind": "StringLiteral",
       "offset": 335,
       "length": 13,
-      "value": "\"3.9.0-beta3\""
+      "value": "\"3.9.1-beta2\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "StringLiteral",
       "offset": 398,
       "length": 8,
-      "value": "\"23.0.2\""
+      "value": "\"23.2.1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
