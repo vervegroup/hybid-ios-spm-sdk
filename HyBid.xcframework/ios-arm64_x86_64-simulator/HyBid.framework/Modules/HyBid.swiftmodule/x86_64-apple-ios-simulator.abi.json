@@ -8917,8 +8917,8 @@
           },
           {
             "kind": "Var",
-            "name": "DEFAULT_END_CARD_CLOSE_MAX_OFFSET",
-            "printedName": "DEFAULT_END_CARD_CLOSE_MAX_OFFSET",
+            "name": "DEFAULT_REWARDED_VIDEO_SKIP_OFFSET",
+            "printedName": "DEFAULT_REWARDED_VIDEO_SKIP_OFFSET",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -8928,8 +8928,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffset(cpy)DEFAULT_END_CARD_CLOSE_MAX_OFFSET",
-            "mangledName": "$s5HyBid0aB10SkipOffsetC33DEFAULT_END_CARD_CLOSE_MAX_OFFSETSivpZ",
+            "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffset(cpy)DEFAULT_REWARDED_VIDEO_SKIP_OFFSET",
+            "mangledName": "$s5HyBid0aB10SkipOffsetC34DEFAULT_REWARDED_VIDEO_SKIP_OFFSETSivpZ",
             "moduleName": "HyBid",
             "static": true,
             "declAttributes": [
@@ -8955,220 +8955,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffset(cm)DEFAULT_END_CARD_CLOSE_MAX_OFFSET",
-                "mangledName": "$s5HyBid0aB10SkipOffsetC33DEFAULT_END_CARD_CLOSE_MAX_OFFSETSivgZ",
-                "moduleName": "HyBid",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final",
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "DEFAULT_REWARDED_VIDEO_MAX_SKIP_OFFSET",
-            "printedName": "DEFAULT_REWARDED_VIDEO_MAX_SKIP_OFFSET",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffset(cpy)DEFAULT_REWARDED_VIDEO_MAX_SKIP_OFFSET",
-            "mangledName": "$s5HyBid0aB10SkipOffsetC38DEFAULT_REWARDED_VIDEO_MAX_SKIP_OFFSETSivpZ",
-            "moduleName": "HyBid",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffset(cm)DEFAULT_REWARDED_VIDEO_MAX_SKIP_OFFSET",
-                "mangledName": "$s5HyBid0aB10SkipOffsetC38DEFAULT_REWARDED_VIDEO_MAX_SKIP_OFFSETSivgZ",
-                "moduleName": "HyBid",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final",
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "DEFAULT_INTERSTITIAL_VIDEO_MAX_SKIP_OFFSET",
-            "printedName": "DEFAULT_INTERSTITIAL_VIDEO_MAX_SKIP_OFFSET",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffset(cpy)DEFAULT_INTERSTITIAL_VIDEO_MAX_SKIP_OFFSET",
-            "mangledName": "$s5HyBid0aB10SkipOffsetC42DEFAULT_INTERSTITIAL_VIDEO_MAX_SKIP_OFFSETSivpZ",
-            "moduleName": "HyBid",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffset(cm)DEFAULT_INTERSTITIAL_VIDEO_MAX_SKIP_OFFSET",
-                "mangledName": "$s5HyBid0aB10SkipOffsetC42DEFAULT_INTERSTITIAL_VIDEO_MAX_SKIP_OFFSETSivgZ",
-                "moduleName": "HyBid",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final",
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "DEFAULT_REWARDED_HTML_MAX_SKIP_OFFSET",
-            "printedName": "DEFAULT_REWARDED_HTML_MAX_SKIP_OFFSET",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffset(cpy)DEFAULT_REWARDED_HTML_MAX_SKIP_OFFSET",
-            "mangledName": "$s5HyBid0aB10SkipOffsetC37DEFAULT_REWARDED_HTML_MAX_SKIP_OFFSETSivpZ",
-            "moduleName": "HyBid",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffset(cm)DEFAULT_REWARDED_HTML_MAX_SKIP_OFFSET",
-                "mangledName": "$s5HyBid0aB10SkipOffsetC37DEFAULT_REWARDED_HTML_MAX_SKIP_OFFSETSivgZ",
-                "moduleName": "HyBid",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final",
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "DEFAULT_INTERSTITIAL_HTML_MAX_SKIP_OFFSET",
-            "printedName": "DEFAULT_INTERSTITIAL_HTML_MAX_SKIP_OFFSET",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffset(cpy)DEFAULT_INTERSTITIAL_HTML_MAX_SKIP_OFFSET",
-            "mangledName": "$s5HyBid0aB10SkipOffsetC41DEFAULT_INTERSTITIAL_HTML_MAX_SKIP_OFFSETSivpZ",
-            "moduleName": "HyBid",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffset(cm)DEFAULT_INTERSTITIAL_HTML_MAX_SKIP_OFFSET",
-                "mangledName": "$s5HyBid0aB10SkipOffsetC41DEFAULT_INTERSTITIAL_HTML_MAX_SKIP_OFFSETSivgZ",
+                "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffset(cm)DEFAULT_REWARDED_VIDEO_SKIP_OFFSET",
+                "mangledName": "$s5HyBid0aB10SkipOffsetC34DEFAULT_REWARDED_VIDEO_SKIP_OFFSETSivgZ",
                 "moduleName": "HyBid",
                 "static": true,
                 "implicit": true,
@@ -9434,59 +9222,6 @@
                 "declKind": "Accessor",
                 "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffset(cm)DEFAULT_PC_INTERSTITIAL_SKIP_OFFSET",
                 "mangledName": "$s5HyBid0aB10SkipOffsetC35DEFAULT_PC_INTERSTITIAL_SKIP_OFFSETSivgZ",
-                "moduleName": "HyBid",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final",
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "DEFAULT_PC_INTERSTITIAL_MAX_SKIP_OFFSET",
-            "printedName": "DEFAULT_PC_INTERSTITIAL_MAX_SKIP_OFFSET",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffset(cpy)DEFAULT_PC_INTERSTITIAL_MAX_SKIP_OFFSET",
-            "mangledName": "$s5HyBid0aB10SkipOffsetC39DEFAULT_PC_INTERSTITIAL_MAX_SKIP_OFFSETSivpZ",
-            "moduleName": "HyBid",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffset(cm)DEFAULT_PC_INTERSTITIAL_MAX_SKIP_OFFSET",
-                "mangledName": "$s5HyBid0aB10SkipOffsetC39DEFAULT_PC_INTERSTITIAL_MAX_SKIP_OFFSETSivgZ",
                 "moduleName": "HyBid",
                 "static": true,
                 "implicit": true,
@@ -14778,109 +14513,6 @@
                 "declKind": "Accessor",
                 "usr": "s:5HyBid0aB9ConstantsC27interstitialActionBehaviourSo0ab12InterstitialeF0avMZ",
                 "mangledName": "$s5HyBid0aB9ConstantsC27interstitialActionBehaviourSo0ab12InterstitialeF0avMZ",
-                "moduleName": "HyBid",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "endCardCloseMaxOffset",
-            "printedName": "endCardCloseMaxOffset",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "HyBidSkipOffset",
-                "printedName": "HyBid.HyBidSkipOffset",
-                "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffset"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@HyBid@objc(cs)HyBidConstants(cpy)endCardCloseMaxOffset",
-            "mangledName": "$s5HyBid0aB9ConstantsC21endCardCloseMaxOffsetAA0ab4SkipH0CvpZ",
-            "moduleName": "HyBid",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "HyBidSkipOffset",
-                    "printedName": "HyBid.HyBidSkipOffset",
-                    "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffset"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@HyBid@objc(cs)HyBidConstants(cm)endCardCloseMaxOffset",
-                "mangledName": "$s5HyBid0aB9ConstantsC21endCardCloseMaxOffsetAA0ab4SkipH0CvgZ",
-                "moduleName": "HyBid",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final",
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "HyBidSkipOffset",
-                    "printedName": "HyBid.HyBidSkipOffset",
-                    "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffset"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@HyBid@objc(cs)HyBidConstants(cm)setEndCardCloseMaxOffset:",
-                "mangledName": "$s5HyBid0aB9ConstantsC21endCardCloseMaxOffsetAA0ab4SkipH0CvsZ",
-                "moduleName": "HyBid",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final",
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:5HyBid0aB9ConstantsC21endCardCloseMaxOffsetAA0ab4SkipH0CvMZ",
-                "mangledName": "$s5HyBid0aB9ConstantsC21endCardCloseMaxOffsetAA0ab4SkipH0CvMZ",
                 "moduleName": "HyBid",
                 "static": true,
                 "implicit": true,
@@ -37568,7 +37200,7 @@
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSKAdNetworkViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5550,
+      "offset": 6489,
       "length": 5,
       "value": "false"
     },
@@ -37638,119 +37270,84 @@
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSkipOffset.swift",
       "kind": "IntegerLiteral",
-      "offset": 555,
+      "offset": 556,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSkipOffset.swift",
       "kind": "IntegerLiteral",
-      "offset": 627,
-      "length": 2,
-      "value": "30"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSkipOffset.swift",
-      "kind": "IntegerLiteral",
-      "offset": 703,
-      "length": 2,
-      "value": "30"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSkipOffset.swift",
-      "kind": "IntegerLiteral",
-      "offset": 774,
-      "length": 2,
-      "value": "30"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSkipOffset.swift",
-      "kind": "IntegerLiteral",
-      "offset": 849,
-      "length": 2,
-      "value": "30"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSkipOffset.swift",
-      "kind": "IntegerLiteral",
-      "offset": 917,
+      "offset": 624,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSkipOffset.swift",
       "kind": "IntegerLiteral",
-      "offset": 984,
+      "offset": 691,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSkipOffset.swift",
       "kind": "IntegerLiteral",
-      "offset": 1059,
+      "offset": 766,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSkipOffset.swift",
       "kind": "IntegerLiteral",
-      "offset": 1139,
+      "offset": 846,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSkipOffset.swift",
       "kind": "IntegerLiteral",
-      "offset": 1213,
+      "offset": 920,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSkipOffset.swift",
       "kind": "IntegerLiteral",
-      "offset": 1285,
-      "length": 2,
-      "value": "15"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSkipOffset.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1355,
+      "offset": 989,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSkipOffset.swift",
       "kind": "IntegerLiteral",
-      "offset": 1419,
+      "offset": 1053,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSkipOffset.swift",
       "kind": "BooleanLiteral",
-      "offset": 1499,
+      "offset": 1133,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSkipOffset.swift",
       "kind": "IntegerLiteral",
-      "offset": 1544,
+      "offset": 1178,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSkipOffset.swift",
       "kind": "IntegerLiteral",
-      "offset": 1789,
+      "offset": 1423,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSkipOffset.swift",
       "kind": "IntegerLiteral",
-      "offset": 1979,
+      "offset": 1613,
       "length": 1,
       "value": "0"
     },
@@ -37878,7 +37475,7 @@
       "kind": "StringLiteral",
       "offset": 335,
       "length": 13,
-      "value": "\"3.9.1-beta2\""
+      "value": "\"3.9.2-beta1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
@@ -38002,98 +37599,91 @@
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 1817,
+      "offset": 1813,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 1974,
+      "offset": 1970,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 2144,
+      "offset": 2140,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 2291,
+      "offset": 2287,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 2443,
+      "offset": 2439,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 2708,
+      "offset": 2707,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 2872,
+      "offset": 2857,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 3022,
+      "offset": 2922,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 3087,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3370,
+      "offset": 3205,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 3436,
+      "offset": 3271,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 3562,
+      "offset": 3397,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 3698,
+      "offset": 3533,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 3912,
+      "offset": 3747,
       "length": 1,
       "value": "0"
     },
@@ -38345,35 +37935,35 @@
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/FullScreen\/Swift\/HyBidInterstitialAd.swift",
       "kind": "Dictionary",
-      "offset": 1638,
+      "offset": 1648,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/FullScreen\/Swift\/HyBidInterstitialAd.swift",
       "kind": "Dictionary",
-      "offset": 1701,
+      "offset": 1711,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/FullScreen\/Swift\/HyBidInterstitialAd.swift",
       "kind": "Dictionary",
-      "offset": 1769,
+      "offset": 1779,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/FullScreen\/Swift\/HyBidInterstitialAd.swift",
       "kind": "Dictionary",
-      "offset": 1833,
+      "offset": 1843,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/FullScreen\/Swift\/HyBidInterstitialAd.swift",
       "kind": "BooleanLiteral",
-      "offset": 1869,
+      "offset": 1879,
       "length": 5,
       "value": "false"
     },

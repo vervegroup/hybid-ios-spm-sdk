@@ -837,9 +837,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) HyBidSkipOffset * _Non
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) HyBidInterstitialActionBehaviour interstitialActionBehaviour;)
 + (HyBidInterstitialActionBehaviour)interstitialActionBehaviour SWIFT_WARN_UNUSED_RESULT;
 + (void)setInterstitialActionBehaviour:(HyBidInterstitialActionBehaviour)value;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) HyBidSkipOffset * _Nonnull endCardCloseMaxOffset;)
-+ (HyBidSkipOffset * _Nonnull)endCardCloseMaxOffset SWIFT_WARN_UNUSED_RESULT;
-+ (void)setEndCardCloseMaxOffset:(HyBidSkipOffset * _Nonnull)value;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) HyBidSkipOffset * _Nonnull nativeCloseButtonOffset;)
 + (HyBidSkipOffset * _Nonnull)nativeCloseButtonOffset SWIFT_WARN_UNUSED_RESULT;
 + (void)setNativeCloseButtonOffset:(HyBidSkipOffset * _Nonnull)value;
@@ -1357,16 +1354,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_SK
 + (NSInteger)DEFAULT_SKIP_OFFSET_WITHOUT_ENDCARD SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_END_CARD_CLOSE_OFFSET;)
 + (NSInteger)DEFAULT_END_CARD_CLOSE_OFFSET SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_END_CARD_CLOSE_MAX_OFFSET;)
-+ (NSInteger)DEFAULT_END_CARD_CLOSE_MAX_OFFSET SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_REWARDED_VIDEO_MAX_SKIP_OFFSET;)
-+ (NSInteger)DEFAULT_REWARDED_VIDEO_MAX_SKIP_OFFSET SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_INTERSTITIAL_VIDEO_MAX_SKIP_OFFSET;)
-+ (NSInteger)DEFAULT_INTERSTITIAL_VIDEO_MAX_SKIP_OFFSET SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_REWARDED_HTML_MAX_SKIP_OFFSET;)
-+ (NSInteger)DEFAULT_REWARDED_HTML_MAX_SKIP_OFFSET SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_INTERSTITIAL_HTML_MAX_SKIP_OFFSET;)
-+ (NSInteger)DEFAULT_INTERSTITIAL_HTML_MAX_SKIP_OFFSET SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_REWARDED_VIDEO_SKIP_OFFSET;)
++ (NSInteger)DEFAULT_REWARDED_VIDEO_SKIP_OFFSET SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_NATIVE_CLOSE_BUTTON_OFFSET;)
 + (NSInteger)DEFAULT_NATIVE_CLOSE_BUTTON_OFFSET SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_PC_VIDEO_SKIP_OFFSET;)
@@ -1377,8 +1366,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_PC
 + (NSInteger)DEFAULT_PC_VIDEO_MAX_SKIP_OFFSET_NON_COMPANION SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_PC_INTERSTITIAL_SKIP_OFFSET;)
 + (NSInteger)DEFAULT_PC_INTERSTITIAL_SKIP_OFFSET SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_PC_INTERSTITIAL_MAX_SKIP_OFFSET;)
-+ (NSInteger)DEFAULT_PC_INTERSTITIAL_MAX_SKIP_OFFSET SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_PC_END_CARD_CLOSE_DELAY;)
 + (NSInteger)DEFAULT_PC_END_CARD_CLOSE_DELAY SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_BC_END_CARD_CLOSE_DELAY;)
@@ -2340,9 +2327,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) HyBidSkipOffset * _Non
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) HyBidInterstitialActionBehaviour interstitialActionBehaviour;)
 + (HyBidInterstitialActionBehaviour)interstitialActionBehaviour SWIFT_WARN_UNUSED_RESULT;
 + (void)setInterstitialActionBehaviour:(HyBidInterstitialActionBehaviour)value;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) HyBidSkipOffset * _Nonnull endCardCloseMaxOffset;)
-+ (HyBidSkipOffset * _Nonnull)endCardCloseMaxOffset SWIFT_WARN_UNUSED_RESULT;
-+ (void)setEndCardCloseMaxOffset:(HyBidSkipOffset * _Nonnull)value;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, strong) HyBidSkipOffset * _Nonnull nativeCloseButtonOffset;)
 + (HyBidSkipOffset * _Nonnull)nativeCloseButtonOffset SWIFT_WARN_UNUSED_RESULT;
 + (void)setNativeCloseButtonOffset:(HyBidSkipOffset * _Nonnull)value;
@@ -2860,16 +2844,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_SK
 + (NSInteger)DEFAULT_SKIP_OFFSET_WITHOUT_ENDCARD SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_END_CARD_CLOSE_OFFSET;)
 + (NSInteger)DEFAULT_END_CARD_CLOSE_OFFSET SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_END_CARD_CLOSE_MAX_OFFSET;)
-+ (NSInteger)DEFAULT_END_CARD_CLOSE_MAX_OFFSET SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_REWARDED_VIDEO_MAX_SKIP_OFFSET;)
-+ (NSInteger)DEFAULT_REWARDED_VIDEO_MAX_SKIP_OFFSET SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_INTERSTITIAL_VIDEO_MAX_SKIP_OFFSET;)
-+ (NSInteger)DEFAULT_INTERSTITIAL_VIDEO_MAX_SKIP_OFFSET SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_REWARDED_HTML_MAX_SKIP_OFFSET;)
-+ (NSInteger)DEFAULT_REWARDED_HTML_MAX_SKIP_OFFSET SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_INTERSTITIAL_HTML_MAX_SKIP_OFFSET;)
-+ (NSInteger)DEFAULT_INTERSTITIAL_HTML_MAX_SKIP_OFFSET SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_REWARDED_VIDEO_SKIP_OFFSET;)
++ (NSInteger)DEFAULT_REWARDED_VIDEO_SKIP_OFFSET SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_NATIVE_CLOSE_BUTTON_OFFSET;)
 + (NSInteger)DEFAULT_NATIVE_CLOSE_BUTTON_OFFSET SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_PC_VIDEO_SKIP_OFFSET;)
@@ -2880,8 +2856,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_PC
 + (NSInteger)DEFAULT_PC_VIDEO_MAX_SKIP_OFFSET_NON_COMPANION SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_PC_INTERSTITIAL_SKIP_OFFSET;)
 + (NSInteger)DEFAULT_PC_INTERSTITIAL_SKIP_OFFSET SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_PC_INTERSTITIAL_MAX_SKIP_OFFSET;)
-+ (NSInteger)DEFAULT_PC_INTERSTITIAL_MAX_SKIP_OFFSET SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_PC_END_CARD_CLOSE_DELAY;)
 + (NSInteger)DEFAULT_PC_END_CARD_CLOSE_DELAY SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_BC_END_CARD_CLOSE_DELAY;)
