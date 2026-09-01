@@ -37475,7 +37475,7 @@
       "kind": "StringLiteral",
       "offset": 335,
       "length": 13,
-      "value": "\"3.9.2-beta1\""
+      "value": "\"3.9.2-beta2\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
