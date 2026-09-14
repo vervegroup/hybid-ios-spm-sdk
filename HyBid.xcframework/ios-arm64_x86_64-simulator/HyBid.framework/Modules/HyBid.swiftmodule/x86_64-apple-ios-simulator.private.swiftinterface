@@ -299,17 +299,12 @@ extension StoreKit.SKStoreProductViewController {
   @objc public static let DEFAULT_REWARDED_HTML_SKIP_OFFSET: Swift.Int
   @objc public static let DEFAULT_SKIP_OFFSET_WITHOUT_ENDCARD: Swift.Int
   @objc public static let DEFAULT_END_CARD_CLOSE_OFFSET: Swift.Int
-  @objc public static let DEFAULT_END_CARD_CLOSE_MAX_OFFSET: Swift.Int
-  @objc public static let DEFAULT_REWARDED_VIDEO_MAX_SKIP_OFFSET: Swift.Int
-  @objc public static let DEFAULT_INTERSTITIAL_VIDEO_MAX_SKIP_OFFSET: Swift.Int
-  @objc public static let DEFAULT_REWARDED_HTML_MAX_SKIP_OFFSET: Swift.Int
-  @objc public static let DEFAULT_INTERSTITIAL_HTML_MAX_SKIP_OFFSET: Swift.Int
+  @objc public static let DEFAULT_REWARDED_VIDEO_SKIP_OFFSET: Swift.Int
   @objc public static let DEFAULT_NATIVE_CLOSE_BUTTON_OFFSET: Swift.Int
   @objc public static let DEFAULT_PC_VIDEO_SKIP_OFFSET: Swift.Int
   @objc public static let DEFAULT_PC_VIDEO_MAX_SKIP_OFFSET_COMPANION: Swift.Int
   @objc public static let DEFAULT_PC_VIDEO_MAX_SKIP_OFFSET_NON_COMPANION: Swift.Int
   @objc public static let DEFAULT_PC_INTERSTITIAL_SKIP_OFFSET: Swift.Int
-  @objc public static let DEFAULT_PC_INTERSTITIAL_MAX_SKIP_OFFSET: Swift.Int
   @objc public static let DEFAULT_PC_END_CARD_CLOSE_DELAY: Swift.Int
   @objc public static let DEFAULT_BC_END_CARD_CLOSE_DELAY: Swift.Int
   @objc public var offset: Foundation.NSNumber?
@@ -414,7 +409,6 @@ extension StoreKit.SKStoreProductViewController {
   @objc public static var videoSkipOffset: HyBidSkipOffset
   @objc public static var pcVideoSkipOffset: HyBidSkipOffset
   @objc public static var interstitialActionBehaviour: HyBidInterstitialActionBehaviour
-  @objc public static var endCardCloseMaxOffset: HyBidSkipOffset
   @objc public static var nativeCloseButtonOffset: HyBidSkipOffset
   @objc public static var audioStatus: HyBidAudioStatus
   @objc public static var creativeAutoStorekitEnabled: Swift.Bool
