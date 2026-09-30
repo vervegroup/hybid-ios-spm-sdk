@@ -885,6 +885,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nonnull ctaL
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) NSInteger sdkAutoStoreKitDelayInputValue;)
 + (NSInteger)sdkAutoStoreKitDelayInputValue SWIFT_WARN_UNUSED_RESULT;
 + (void)setSdkAutoStoreKitDelayInputValue:(NSInteger)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) NSInteger closeButtonTouchSize;)
++ (NSInteger)closeButtonTouchSize SWIFT_WARN_UNUSED_RESULT;
++ (void)setCloseButtonTouchSize:(NSInteger)value;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) NSInteger closeButtonInitialTouchSize;)
++ (NSInteger)closeButtonInitialTouchSize SWIFT_WARN_UNUSED_RESULT;
++ (void)setCloseButtonInitialTouchSize:(NSInteger)value;
 + (HyBidSkipOffset * _Nonnull)endCardCloseOffsetWithAdExperience:(NSString * _Nullable)adExperience SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -1094,6 +1100,13 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) HyBidLocatio
 @property (nonatomic) BOOL locationUpdatesEnabled;
 @end
 
+SWIFT_CLASS("_TtC5HyBid19HyBidLocationHelper")
+@interface HyBidLocationHelper : NSObject
++ (double)roundedCoordinate:(double)value SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nonnull)formattedCoordinate:(double)value SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 SWIFT_CLASS("_TtC5HyBid11HyBidLogger")
 @interface HyBidLogger : NSObject
 + (void)setLogLevel:(HyBidLogLevel)logLevel;
@@ -1265,6 +1278,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) HyBidSKAdNet
 - (void)presentStoreKitViewWithProductParameters:(NSDictionary<NSString *, id> * _Nonnull)productParameters adFormat:(NSString * _Nonnull)adFormat isAutoStoreKitView:(BOOL)isAutoStoreKitView ad:(HyBidAd * _Nonnull)ad rootViewController:(UIViewController * _Nonnull)rootViewController;
 - (void)presentStoreKitViewWithProductParameters:(NSDictionary<NSString *, id> * _Nonnull)productParameters adFormat:(NSString * _Nonnull)adFormat isAutoStoreKitView:(BOOL)isAutoStoreKitView ad:(HyBidAd * _Nonnull)ad;
 - (BOOL)isSKProductViewControllerPresented SWIFT_WARN_UNUSED_RESULT;
+- (void)resetStoreKitPresentationState;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1380,11 +1394,31 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger DEFAULT_BC
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+SWIFT_CLASS("_TtC5HyBid25HyBidSkipOffsetResolution")
+@interface HyBidSkipOffsetResolution : NSObject
+@property (nonatomic, readonly, strong) HyBidSkipOffset * _Nullable skipOffset;
+@property (nonatomic, readonly) BOOL hasInvalidVASTSkipOffset;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS("_TtC5HyBid23HyBidSkipOffsetResolver")
+@interface HyBidSkipOffsetResolver : NSObject
++ (HyBidSkipOffsetResolution * _Nonnull)resolveWithSkipOffsetChain:(NSArray<NSString *> * _Nonnull)skipOffsetChain durationString:(NSString * _Nullable)durationString remoteConfigOffset:(NSNumber * _Nullable)remoteConfigOffset remoteConfigPercentage:(NSString * _Nullable)remoteConfigPercentage sdkDefaultOffset:(NSNumber * _Nullable)sdkDefaultOffset SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 SWIFT_CLASS("_TtC5HyBid19HyBidTargetingModel")
 @interface HyBidTargetingModel : NSObject
 @property (nonatomic, strong) NSNumber * _Nullable age;
 @property (nonatomic, copy) NSArray<NSString *> * _Nonnull interests;
 @property (nonatomic, copy) NSString * _Nullable gender;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+SWIFT_CLASS("_TtC5HyBid17HyBidTimeResolver")
+@interface HyBidTimeResolver : NSObject
++ (NSNumber * _Nullable)absoluteSecondsFromString:(NSString * _Nonnull)string SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

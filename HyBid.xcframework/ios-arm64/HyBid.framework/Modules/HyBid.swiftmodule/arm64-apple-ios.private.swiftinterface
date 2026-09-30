@@ -46,6 +46,28 @@ import _SwiftConcurrencyShims
 extension UIKit.UIViewController {
   @_Concurrency.MainActor @preconcurrency public func showCustomAlert(title: Swift.String, message: Swift.String? = nil, style: UIKit.UIAlertController.Style = .alert, firstAction: UIKit.UIAlertAction? = nil, secondAction: UIKit.UIAlertAction? = nil, completionHandler: (() -> Swift.Void)? = nil)
 }
+@_inheritsConvenienceInitializers @objc public class HyBidLocationHelper : ObjectiveC.NSObject {
+  @objc(roundedCoordinate:) public static func roundedCoordinate(_ value: Swift.Double) -> Swift.Double
+  @objc(formattedCoordinate:) public static func formattedCoordinate(_ value: Swift.Double) -> Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class HyBidSkipOffsetResolution : ObjectiveC.NSObject {
+  @objc final public let skipOffset: HyBidSkipOffset?
+  @objc final public let hasInvalidVASTSkipOffset: Swift.Bool
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class HyBidSkipOffsetResolver : ObjectiveC.NSObject {
+  @objc(resolveWithSkipOffsetChain:durationString:remoteConfigOffset:remoteConfigPercentage:sdkDefaultOffset:) public static func resolve(skipOffsetChain: [Swift.String], durationString: Swift.String?, remoteConfigOffset: Foundation.NSNumber?, remoteConfigPercentage: Swift.String?, sdkDefaultOffset: Foundation.NSNumber?) -> HyBidSkipOffsetResolution
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class HyBidTimeResolver : ObjectiveC.NSObject {
+  public static func absoluteSeconds(from string: Swift.String) -> Swift.Double?
+  @objc(absoluteSecondsFromString:) public static func absoluteSecondsFromString(_ string: Swift.String) -> Foundation.NSNumber?
+  @objc override dynamic public init()
+  @objc deinit
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class HyBidSDKConfig : ObjectiveC.NSObject {
   @objc public static let sharedConfig: HyBidSDKConfig
   @objc public var test: Swift.Bool
@@ -255,6 +277,7 @@ public typealias ReportingKey = Swift.String
   @objc public func presentStoreKitView(productParameters: Swift.Dictionary<Swift.String, Any>, adFormat: Swift.String, isAutoStoreKitView: Swift.Bool, ad: HyBidAd, rootViewController: UIKit.UIViewController)
   @objc public func presentStoreKitView(productParameters: Swift.Dictionary<Swift.String, Any>, adFormat: Swift.String, isAutoStoreKitView: Swift.Bool, ad: HyBidAd)
   @objc public func isSKProductViewControllerPresented() -> Swift.Bool
+  @objc public func resetStoreKitPresentationState()
   @objc override dynamic public init()
   @objc deinit
 }
@@ -425,6 +448,8 @@ extension StoreKit.SKStoreProductViewController {
   @objc public static var ctaSizeTypeInputValue: Swift.String
   @objc public static var ctaLocationTypeInputValue: Swift.String
   @objc public static var sdkAutoStoreKitDelayInputValue: Swift.Int
+  @objc public static var closeButtonTouchSize: Swift.Int
+  @objc public static var closeButtonInitialTouchSize: Swift.Int
   @objc public static func endCardCloseOffset(adExperience: Swift.String?) -> HyBidSkipOffset
   @objc override dynamic public init()
   @objc deinit
