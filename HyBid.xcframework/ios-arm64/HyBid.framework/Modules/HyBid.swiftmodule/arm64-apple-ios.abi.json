@@ -926,6 +926,830 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "HyBidLocationHelper",
+        "printedName": "HyBidLocationHelper",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "roundedCoordinate",
+            "printedName": "roundedCoordinate(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@HyBid@objc(cs)HyBidLocationHelper(cm)roundedCoordinate:",
+            "mangledName": "$s5HyBid0aB14LocationHelperC17roundedCoordinateyS2dFZ",
+            "moduleName": "HyBid",
+            "static": true,
+            "objc_name": "roundedCoordinate:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "formattedCoordinate",
+            "printedName": "formattedCoordinate(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@HyBid@objc(cs)HyBidLocationHelper(cm)formattedCoordinate:",
+            "mangledName": "$s5HyBid0aB14LocationHelperC19formattedCoordinateySSSdFZ",
+            "moduleName": "HyBid",
+            "static": true,
+            "objc_name": "formattedCoordinate:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HyBidLocationHelper",
+                "printedName": "HyBid.HyBidLocationHelper",
+                "usr": "c:@M@HyBid@objc(cs)HyBidLocationHelper"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@HyBid@objc(cs)HyBidLocationHelper(im)init",
+            "mangledName": "$s5HyBid0aB14LocationHelperCACycfc",
+            "moduleName": "HyBid",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@HyBid@objc(cs)HyBidLocationHelper",
+        "mangledName": "$s5HyBid0aB14LocationHelperC",
+        "moduleName": "HyBid",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "HyBid",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HyBidSkipOffsetResolution",
+        "printedName": "HyBidSkipOffsetResolution",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "skipOffset",
+            "printedName": "skipOffset",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "HyBid.HyBidSkipOffset?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HyBidSkipOffset",
+                    "printedName": "HyBid.HyBidSkipOffset",
+                    "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffset"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffsetResolution(py)skipOffset",
+            "mangledName": "$s5HyBid0aB20SkipOffsetResolutionC04skipD0AA0abcD0CSgvp",
+            "moduleName": "HyBid",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "HyBid.HyBidSkipOffset?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HyBidSkipOffset",
+                        "printedName": "HyBid.HyBidSkipOffset",
+                        "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffset"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffsetResolution(im)skipOffset",
+                "mangledName": "$s5HyBid0aB20SkipOffsetResolutionC04skipD0AA0abcD0CSgvg",
+                "moduleName": "HyBid",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hasInvalidVASTSkipOffset",
+            "printedName": "hasInvalidVASTSkipOffset",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffsetResolution(py)hasInvalidVASTSkipOffset",
+            "mangledName": "$s5HyBid0aB20SkipOffsetResolutionC018hasInvalidVASTSkipD0Sbvp",
+            "moduleName": "HyBid",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffsetResolution(im)hasInvalidVASTSkipOffset",
+                "mangledName": "$s5HyBid0aB20SkipOffsetResolutionC018hasInvalidVASTSkipD0Sbvg",
+                "moduleName": "HyBid",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HyBidSkipOffsetResolution",
+                "printedName": "HyBid.HyBidSkipOffsetResolution",
+                "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffsetResolution"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffsetResolution(im)init",
+            "mangledName": "$s5HyBid0aB20SkipOffsetResolutionCACycfc",
+            "moduleName": "HyBid",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffsetResolution",
+        "mangledName": "$s5HyBid0aB20SkipOffsetResolutionC",
+        "moduleName": "HyBid",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HyBidSkipOffsetResolver",
+        "printedName": "HyBidSkipOffsetResolver",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "resolve",
+            "printedName": "resolve(skipOffsetChain:durationString:remoteConfigOffset:remoteConfigPercentage:sdkDefaultOffset:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HyBidSkipOffsetResolution",
+                "printedName": "HyBid.HyBidSkipOffsetResolution",
+                "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffsetResolution"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSNumber?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSNumber?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffsetResolver(cm)resolveWithSkipOffsetChain:durationString:remoteConfigOffset:remoteConfigPercentage:sdkDefaultOffset:",
+            "mangledName": "$s5HyBid0aB18SkipOffsetResolverC7resolve04skipD5Chain14durationString012remoteConfigD00kL10Percentage010sdkDefaultD0AA0abcD10ResolutionCSaySSG_SSSgSo8NSNumberCSgAmPtFZ",
+            "moduleName": "HyBid",
+            "static": true,
+            "objc_name": "resolveWithSkipOffsetChain:durationString:remoteConfigOffset:remoteConfigPercentage:sdkDefaultOffset:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HyBidSkipOffsetResolver",
+                "printedName": "HyBid.HyBidSkipOffsetResolver",
+                "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffsetResolver"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffsetResolver(im)init",
+            "mangledName": "$s5HyBid0aB18SkipOffsetResolverCACycfc",
+            "moduleName": "HyBid",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@HyBid@objc(cs)HyBidSkipOffsetResolver",
+        "mangledName": "$s5HyBid0aB18SkipOffsetResolverC",
+        "moduleName": "HyBid",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "HyBid",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HyBidTimeResolver",
+        "printedName": "HyBidTimeResolver",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "absoluteSeconds",
+            "printedName": "absoluteSeconds(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:5HyBid0aB12TimeResolverC15absoluteSeconds4fromSdSgSS_tFZ",
+            "mangledName": "$s5HyBid0aB12TimeResolverC15absoluteSeconds4fromSdSgSS_tFZ",
+            "moduleName": "HyBid",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "absoluteSecondsFromString",
+            "printedName": "absoluteSecondsFromString(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSNumber?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@HyBid@objc(cs)HyBidTimeResolver(cm)absoluteSecondsFromString:",
+            "mangledName": "$s5HyBid0aB12TimeResolverC25absoluteSecondsFromStringySo8NSNumberCSgSSFZ",
+            "moduleName": "HyBid",
+            "static": true,
+            "objc_name": "absoluteSecondsFromString:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HyBidTimeResolver",
+                "printedName": "HyBid.HyBidTimeResolver",
+                "usr": "c:@M@HyBid@objc(cs)HyBidTimeResolver"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@HyBid@objc(cs)HyBidTimeResolver(im)init",
+            "mangledName": "$s5HyBid0aB12TimeResolverCACycfc",
+            "moduleName": "HyBid",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@HyBid@objc(cs)HyBidTimeResolver",
+        "mangledName": "$s5HyBid0aB12TimeResolverC",
+        "moduleName": "HyBid",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "HyBid",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "AppTrackingTransparency",
         "printedName": "AppTrackingTransparency",
@@ -7743,6 +8567,27 @@
             "declKind": "Func",
             "usr": "c:@M@HyBid@objc(cs)HyBidSKAdNetworkViewController(im)isSKProductViewControllerPresented",
             "mangledName": "$s5HyBid0aB25SKAdNetworkViewControllerC011isSKProducteF9PresentedSbyF",
+            "moduleName": "HyBid",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "resetStoreKitPresentationState",
+            "printedName": "resetStoreKitPresentationState()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@HyBid@objc(cs)HyBidSKAdNetworkViewController(im)resetStoreKitPresentationState",
+            "mangledName": "$s5HyBid0aB25SKAdNetworkViewControllerC30resetStoreKitPresentationStateyyF",
             "moduleName": "HyBid",
             "declAttributes": [
               "AccessControl",
@@ -16161,6 +17006,212 @@
                 "declKind": "Accessor",
                 "usr": "s:5HyBid0aB9ConstantsC30sdkAutoStoreKitDelayInputValueSivMZ",
                 "mangledName": "$s5HyBid0aB9ConstantsC30sdkAutoStoreKitDelayInputValueSivMZ",
+                "moduleName": "HyBid",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "closeButtonTouchSize",
+            "printedName": "closeButtonTouchSize",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@HyBid@objc(cs)HyBidConstants(cpy)closeButtonTouchSize",
+            "mangledName": "$s5HyBid0aB9ConstantsC20closeButtonTouchSizeSivpZ",
+            "moduleName": "HyBid",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@HyBid@objc(cs)HyBidConstants(cm)closeButtonTouchSize",
+                "mangledName": "$s5HyBid0aB9ConstantsC20closeButtonTouchSizeSivgZ",
+                "moduleName": "HyBid",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@HyBid@objc(cs)HyBidConstants(cm)setCloseButtonTouchSize:",
+                "mangledName": "$s5HyBid0aB9ConstantsC20closeButtonTouchSizeSivsZ",
+                "moduleName": "HyBid",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5HyBid0aB9ConstantsC20closeButtonTouchSizeSivMZ",
+                "mangledName": "$s5HyBid0aB9ConstantsC20closeButtonTouchSizeSivMZ",
+                "moduleName": "HyBid",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "closeButtonInitialTouchSize",
+            "printedName": "closeButtonInitialTouchSize",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@HyBid@objc(cs)HyBidConstants(cpy)closeButtonInitialTouchSize",
+            "mangledName": "$s5HyBid0aB9ConstantsC27closeButtonInitialTouchSizeSivpZ",
+            "moduleName": "HyBid",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@HyBid@objc(cs)HyBidConstants(cm)closeButtonInitialTouchSize",
+                "mangledName": "$s5HyBid0aB9ConstantsC27closeButtonInitialTouchSizeSivgZ",
+                "moduleName": "HyBid",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@HyBid@objc(cs)HyBidConstants(cm)setCloseButtonInitialTouchSize:",
+                "mangledName": "$s5HyBid0aB9ConstantsC27closeButtonInitialTouchSizeSivsZ",
+                "moduleName": "HyBid",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:5HyBid0aB9ConstantsC27closeButtonInitialTouchSizeSivMZ",
+                "mangledName": "$s5HyBid0aB9ConstantsC27closeButtonInitialTouchSizeSivMZ",
                 "moduleName": "HyBid",
                 "static": true,
                 "implicit": true,
@@ -35602,6 +36653,20 @@
       "value": "\"\""
     },
     {
+      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidLocationHelper.swift",
+      "kind": "IntegerLiteral",
+      "offset": 224,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSkipOffsetResolver.swift",
+      "kind": "StringLiteral",
+      "offset": 567,
+      "length": 4,
+      "value": "\"-1\""
+    },
+    {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Config\/HyBidSDKConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 337,
@@ -37193,14 +38258,14 @@
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSKAdNetworkViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1082,
+      "offset": 1074,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSKAdNetworkViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6489,
+      "offset": 6866,
       "length": 5,
       "value": "false"
     },
@@ -37475,14 +38540,14 @@
       "kind": "StringLiteral",
       "offset": 335,
       "length": 7,
-      "value": "\"3.9.2\""
+      "value": "\"3.9.3\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "StringLiteral",
       "offset": 392,
       "length": 8,
-      "value": "\"23.2.1\""
+      "value": "\"23.2.2\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
@@ -37684,6 +38749,20 @@
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "IntegerLiteral",
       "offset": 3741,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3799,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3864,
       "length": 1,
       "value": "0"
     },
