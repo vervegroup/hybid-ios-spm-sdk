@@ -8176,20 +8176,13 @@
       },
       {
         "kind": "Import",
-        "name": "AdAttributionKit",
-        "printedName": "AdAttributionKit",
+        "name": "StoreKit",
+        "printedName": "StoreKit",
         "declKind": "Import",
         "moduleName": "HyBid",
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "StoreKit",
-        "printedName": "StoreKit",
-        "declKind": "Import",
-        "moduleName": "HyBid"
       },
       {
         "kind": "TypeDecl",
@@ -8266,11 +8259,8 @@
             "mangledName": "$s5HyBid0aB25SKAdNetworkViewControllerC010isStoreKitE9PresentedSbvp",
             "moduleName": "HyBid",
             "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
               "AccessControl"
             ],
-            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -8288,50 +8278,7 @@
                 "usr": "s:5HyBid0aB25SKAdNetworkViewControllerC010isStoreKitE9PresentedSbvg",
                 "mangledName": "$s5HyBid0aB25SKAdNetworkViewControllerC010isStoreKitE9PresentedSbvg",
                 "moduleName": "HyBid",
-                "implicit": true,
                 "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:5HyBid0aB25SKAdNetworkViewControllerC010isStoreKitE9PresentedSbvs",
-                "mangledName": "$s5HyBid0aB25SKAdNetworkViewControllerC010isStoreKitE9PresentedSbvs",
-                "moduleName": "HyBid",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:5HyBid0aB25SKAdNetworkViewControllerC010isStoreKitE9PresentedSbvM",
-                "mangledName": "$s5HyBid0aB25SKAdNetworkViewControllerC010isStoreKitE9PresentedSbvM",
-                "moduleName": "HyBid",
-                "implicit": true,
-                "accessorKind": "_modify"
               }
             ]
           },
@@ -8554,6 +8501,55 @@
           },
           {
             "kind": "Function",
+            "name": "reportSuppressedClick",
+            "printedName": "reportSuppressedClick(adFormat:isAutoStoreKitView:ad:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "HyBid.HyBidAd?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HyBidAd",
+                    "printedName": "HyBid.HyBidAd",
+                    "usr": "c:objc(cs)HyBidAd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@HyBid@objc(cs)HyBidSKAdNetworkViewController(im)reportSuppressedClickWithAdFormat:isAutoStoreKitView:ad:",
+            "mangledName": "$s5HyBid0aB25SKAdNetworkViewControllerC21reportSuppressedClick8adFormat014isAutoStoreKitE00J0ySS_SbSo0aB2AdCSgtF",
+            "moduleName": "HyBid",
+            "objc_name": "reportSuppressedClickWithAdFormat:isAutoStoreKitView:ad:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "isSKProductViewControllerPresented",
             "printedName": "isSKProductViewControllerPresented()",
             "children": [
@@ -8589,9 +8585,48 @@
             "usr": "c:@M@HyBid@objc(cs)HyBidSKAdNetworkViewController(im)resetStoreKitPresentationState",
             "mangledName": "$s5HyBid0aB25SKAdNetworkViewControllerC30resetStoreKitPresentationStateyyF",
             "moduleName": "HyBid",
+            "deprecated": true,
             "declAttributes": [
               "AccessControl",
-              "ObjC"
+              "ObjC",
+              "Available"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "cancelStoreKitRequest",
+            "printedName": "cancelStoreKitRequest(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "HyBid.HyBidAd?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HyBidAd",
+                    "printedName": "HyBid.HyBidAd",
+                    "usr": "c:objc(cs)HyBidAd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@HyBid@objc(cs)HyBidSKAdNetworkViewController(im)cancelStoreKitRequestForAd:",
+            "mangledName": "$s5HyBid0aB25SKAdNetworkViewControllerC21cancelStoreKitRequest3forySo0aB2AdCSg_tF",
+            "moduleName": "HyBid",
+            "objc_name": "cancelStoreKitRequestForAd:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -8722,7 +8757,8 @@
         "moduleName": "HyBid",
         "declAttributes": [
           "AccessControl",
-          "ObjC"
+          "ObjC",
+          "RawDocComment"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
         "inheritsConvenienceInitializers": true,
@@ -8793,6 +8829,43 @@
             "usr": "s:SH",
             "mangledName": "$sSH"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AdAttributionKit",
+        "printedName": "AdAttributionKit",
+        "declKind": "Import",
+        "moduleName": "HyBid",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AdAttributionKit",
+        "printedName": "AdAttributionKit",
+        "declKind": "Import",
+        "moduleName": "HyBid",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "StoreKit",
+        "printedName": "StoreKit",
+        "declKind": "Import",
+        "moduleName": "HyBid"
+      },
+      {
+        "kind": "Import",
+        "name": "StoreKit",
+        "printedName": "StoreKit",
+        "declKind": "Import",
+        "moduleName": "HyBid",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -11121,6 +11194,43 @@
           },
           {
             "kind": "Function",
+            "name": "impressionDepth",
+            "printedName": "impressionDepth(zoneID:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@HyBid@objc(cs)HyBidSessionManager(im)impressionDepthWithZoneID:",
+            "mangledName": "$s5HyBid0aB14SessionManagerC15impressionDepth6zoneIDSiSSSg_tF",
+            "moduleName": "HyBid",
+            "objc_name": "impressionDepthWithZoneID:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "setStartSession",
             "printedName": "setStartSession()",
             "children": [
@@ -11142,6 +11252,28 @@
           },
           {
             "kind": "Function",
+            "name": "refreshSession",
+            "printedName": "refreshSession()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@HyBid@objc(cs)HyBidSessionManager(im)refreshSession",
+            "mangledName": "$s5HyBid0aB14SessionManagerC07refreshC0yyF",
+            "moduleName": "HyBid",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "updateSession",
             "printedName": "updateSession(zoneID:)",
             "children": [
@@ -11152,14 +11284,22 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
             "usr": "c:@M@HyBid@objc(cs)HyBidSessionManager(im)updateSessionWithZoneID:",
-            "mangledName": "$s5HyBid0aB14SessionManagerC06updateC06zoneIDySS_tF",
+            "mangledName": "$s5HyBid0aB14SessionManagerC06updateC06zoneIDySSSg_tF",
             "moduleName": "HyBid",
             "objc_name": "updateSessionWithZoneID:",
             "declAttributes": [
@@ -11180,14 +11320,22 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
             "usr": "c:@M@HyBid@objc(cs)HyBidSessionManager(im)incrementImpressionCounterWithZoneID:",
-            "mangledName": "$s5HyBid0aB14SessionManagerC26incrementImpressionCounter6zoneIDySS_tF",
+            "mangledName": "$s5HyBid0aB14SessionManagerC26incrementImpressionCounter6zoneIDySSSg_tF",
             "moduleName": "HyBid",
             "objc_name": "incrementImpressionCounterWithZoneID:",
             "declAttributes": [
@@ -11208,14 +11356,22 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
             "usr": "c:@M@HyBid@objc(cs)HyBidSessionManager(im)sessionDurationWithZoneID:",
-            "mangledName": "$s5HyBid0aB14SessionManagerC15sessionDuration6zoneIDySS_tF",
+            "mangledName": "$s5HyBid0aB14SessionManagerC15sessionDuration6zoneIDySSSg_tF",
             "moduleName": "HyBid",
             "objc_name": "sessionDurationWithZoneID:",
             "declAttributes": [
@@ -20525,6 +20681,27 @@
           },
           {
             "kind": "Function",
+            "name": "productViewControllerDidNotShow",
+            "printedName": "productViewControllerDidNotShow()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:5HyBid0aB19InterruptionHandlerC31productViewControllerDidNotShowyyF",
+            "mangledName": "$s5HyBid0aB19InterruptionHandlerC31productViewControllerDidNotShowyyF",
+            "moduleName": "HyBid",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "productViewControllerDidFail",
             "printedName": "productViewControllerDidFail(error:)",
             "children": [
@@ -29733,6 +29910,59 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "IS_AUTO_STOREKIT",
+            "printedName": "IS_AUTO_STOREKIT",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@HyBid@objc(cs)HyBidReportingCommon(cpy)IS_AUTO_STOREKIT",
+            "mangledName": "$s5HyBid6CommonC16IS_AUTO_STOREKITSSvpZ",
+            "moduleName": "HyBid",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@HyBid@objc(cs)HyBidReportingCommon(cm)IS_AUTO_STOREKIT",
+                "mangledName": "$s5HyBid6CommonC16IS_AUTO_STOREKITSSvgZ",
+                "moduleName": "HyBid",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -33027,6 +33257,165 @@
           },
           {
             "kind": "Var",
+            "name": "STOREKIT_PRESENTATION_ERROR",
+            "printedName": "STOREKIT_PRESENTATION_ERROR",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@HyBid@objc(cs)HyBidReportingEventType(cpy)STOREKIT_PRESENTATION_ERROR",
+            "mangledName": "$s5HyBid9EventTypeC27STOREKIT_PRESENTATION_ERRORSSvpZ",
+            "moduleName": "HyBid",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@HyBid@objc(cs)HyBidReportingEventType(cm)STOREKIT_PRESENTATION_ERROR",
+                "mangledName": "$s5HyBid9EventTypeC27STOREKIT_PRESENTATION_ERRORSSvgZ",
+                "moduleName": "HyBid",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "STOREKIT_LOAD_ERROR",
+            "printedName": "STOREKIT_LOAD_ERROR",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@HyBid@objc(cs)HyBidReportingEventType(cpy)STOREKIT_LOAD_ERROR",
+            "mangledName": "$s5HyBid9EventTypeC19STOREKIT_LOAD_ERRORSSvpZ",
+            "moduleName": "HyBid",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@HyBid@objc(cs)HyBidReportingEventType(cm)STOREKIT_LOAD_ERROR",
+                "mangledName": "$s5HyBid9EventTypeC19STOREKIT_LOAD_ERRORSSvgZ",
+                "moduleName": "HyBid",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "STOREKIT_CLICK_SUPPRESSED",
+            "printedName": "STOREKIT_CLICK_SUPPRESSED",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@HyBid@objc(cs)HyBidReportingEventType(cpy)STOREKIT_CLICK_SUPPRESSED",
+            "mangledName": "$s5HyBid9EventTypeC25STOREKIT_CLICK_SUPPRESSEDSSvpZ",
+            "moduleName": "HyBid",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@HyBid@objc(cs)HyBidReportingEventType(cm)STOREKIT_CLICK_SUPPRESSED",
+                "mangledName": "$s5HyBid9EventTypeC25STOREKIT_CLICK_SUPPRESSEDSSvgZ",
+                "moduleName": "HyBid",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "AD_ATTRIBUTION_KIT_AD_TYPE_MACRO",
             "printedName": "AD_ATTRIBUTION_KIT_AD_TYPE_MACRO",
             "children": [
@@ -34864,6 +35253,59 @@
           },
           {
             "kind": "Var",
+            "name": "COMPANION_CLICK_TRACKING",
+            "printedName": "COMPANION_CLICK_TRACKING",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@HyBid@objc(cs)HyBidReportingVASTTrackerType(cpy)COMPANION_CLICK_TRACKING",
+            "mangledName": "$s5HyBid15VASTTrackerTypeC24COMPANION_CLICK_TRACKINGSSvpZ",
+            "moduleName": "HyBid",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@HyBid@objc(cs)HyBidReportingVASTTrackerType(cm)COMPANION_CLICK_TRACKING",
+                "mangledName": "$s5HyBid15VASTTrackerTypeC24COMPANION_CLICK_TRACKINGSSvgZ",
+                "moduleName": "HyBid",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "PROGRESS",
             "printedName": "PROGRESS",
             "children": [
@@ -35767,6 +36209,665 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "HyBid",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ImageIO",
+        "printedName": "ImageIO",
+        "declKind": "Import",
+        "moduleName": "HyBid"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "HyBid"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HyBidImageLoader",
+        "printedName": "HyBidImageLoader",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "iconMaximumByteCount",
+            "printedName": "iconMaximumByteCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@HyBid@objc(cs)HyBidImageLoader(cpy)iconMaximumByteCount",
+            "mangledName": "$s5HyBid0aB11ImageLoaderC20iconMaximumByteCountSivpZ",
+            "moduleName": "HyBid",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@HyBid@objc(cs)HyBidImageLoader(cm)iconMaximumByteCount",
+                "mangledName": "$s5HyBid0aB11ImageLoaderC20iconMaximumByteCountSivgZ",
+                "moduleName": "HyBid",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "imageMaximumByteCount",
+            "printedName": "imageMaximumByteCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@HyBid@objc(cs)HyBidImageLoader(cpy)imageMaximumByteCount",
+            "mangledName": "$s5HyBid0aB11ImageLoaderC21imageMaximumByteCountSivpZ",
+            "moduleName": "HyBid",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@HyBid@objc(cs)HyBidImageLoader(cm)imageMaximumByteCount",
+                "mangledName": "$s5HyBid0aB11ImageLoaderC21imageMaximumByteCountSivgZ",
+                "moduleName": "HyBid",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "maximumSourcePixelCount",
+            "printedName": "maximumSourcePixelCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@HyBid@objc(cs)HyBidImageLoader(cpy)maximumSourcePixelCount",
+            "mangledName": "$s5HyBid0aB11ImageLoaderC23maximumSourcePixelCount12CoreGraphics7CGFloatVvpZ",
+            "moduleName": "HyBid",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGFloat",
+                    "printedName": "CoreGraphics.CGFloat",
+                    "usr": "s:14CoreFoundation7CGFloatV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@HyBid@objc(cs)HyBidImageLoader(cm)maximumSourcePixelCount",
+                "mangledName": "$s5HyBid0aB11ImageLoaderC23maximumSourcePixelCount12CoreGraphics7CGFloatVvgZ",
+                "moduleName": "HyBid",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "downloadData",
+            "printedName": "downloadData(from:maximumByteCount:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URLSessionDataTask",
+                "printedName": "Foundation.URLSessionDataTask",
+                "usr": "c:objc(cs)NSURLSessionDataTask"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Foundation.Data?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Data",
+                            "printedName": "Foundation.Data",
+                            "usr": "s:10Foundation4DataV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Foundation.URLResponse?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "URLResponse",
+                            "printedName": "Foundation.URLResponse",
+                            "usr": "c:objc(cs)NSURLResponse"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "(any Swift.Error)?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "any Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@HyBid@objc(cs)HyBidImageLoader(cm)downloadDataFrom:maximumByteCount:completion:",
+            "mangledName": "$s5HyBid0aB11ImageLoaderC12downloadData4from16maximumByteCount10completionSo012NSURLSessionF4TaskC10Foundation3URLV_SiyAJ0F0VSg_So13NSURLResponseCSgs5Error_pSgtctFZ",
+            "moduleName": "HyBid",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "downloadData",
+            "printedName": "downloadData(with:maximumByteCount:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "URLSessionDataTask",
+                "printedName": "Foundation.URLSessionDataTask",
+                "usr": "c:objc(cs)NSURLSessionDataTask"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URLRequest",
+                "printedName": "Foundation.URLRequest",
+                "usr": "s:10Foundation10URLRequestV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Foundation.Data?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Data",
+                            "printedName": "Foundation.Data",
+                            "usr": "s:10Foundation4DataV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Foundation.URLResponse?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "URLResponse",
+                            "printedName": "Foundation.URLResponse",
+                            "usr": "c:objc(cs)NSURLResponse"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "(any Swift.Error)?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "any Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@HyBid@objc(cs)HyBidImageLoader(cm)downloadDataWith:maximumByteCount:completion:",
+            "mangledName": "$s5HyBid0aB11ImageLoaderC12downloadData4with16maximumByteCount10completionSo012NSURLSessionF4TaskC10Foundation10URLRequestV_SiyAJ0F0VSg_So13NSURLResponseCSgs5Error_pSgtctFZ",
+            "moduleName": "HyBid",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "DiscardableResult",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "loadImage",
+            "printedName": "loadImage(from:maximumByteCount:maximumPixelSize:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(UIKit.UIImage?, (any Swift.Error)?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(UIKit.UIImage?, (any Swift.Error)?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "UIKit.UIImage?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UIImage",
+                            "printedName": "UIKit.UIImage",
+                            "usr": "c:objc(cs)UIImage"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "(any Swift.Error)?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "any Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@HyBid@objc(cs)HyBidImageLoader(cm)loadImageFrom:maximumByteCount:maximumPixelSize:completion:",
+            "mangledName": "$s5HyBid0aB11ImageLoaderC04loadC04from16maximumByteCount0G9PixelSize10completiony10Foundation3URLV_Si12CoreGraphics7CGFloatVySo7UIImageCSg_s5Error_pSgtctFZ",
+            "moduleName": "HyBid",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "downsampledImage",
+            "printedName": "downsampledImage(with:maximumPixelSize:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGFloat",
+                "printedName": "CoreGraphics.CGFloat",
+                "usr": "s:14CoreFoundation7CGFloatV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@HyBid@objc(cs)HyBidImageLoader(cm)downsampledImageWith:maximumPixelSize:",
+            "mangledName": "$s5HyBid0aB11ImageLoaderC011downsampledC04with16maximumPixelSizeSo7UIImageCSg10Foundation4DataV_12CoreGraphics7CGFloatVtFZ",
+            "moduleName": "HyBid",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isSupportedImage",
+            "printedName": "isSupportedImage(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@HyBid@objc(cs)HyBidImageLoader(cm)isSupportedImage:",
+            "mangledName": "$s5HyBid0aB11ImageLoaderC011isSupportedC0ySb10Foundation4DataVFZ",
+            "moduleName": "HyBid",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HyBidImageLoader",
+                "printedName": "HyBid.HyBidImageLoader",
+                "usr": "c:@M@HyBid@objc(cs)HyBidImageLoader"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@HyBid@objc(cs)HyBidImageLoader(im)init",
+            "mangledName": "$s5HyBid0aB11ImageLoaderCACycfc",
+            "moduleName": "HyBid",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@HyBid@objc(cs)HyBidImageLoader",
+        "mangledName": "$s5HyBid0aB11ImageLoaderC",
+        "moduleName": "HyBid",
+        "declAttributes": [
+          "AccessControl",
+          "ObjCMembers",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "UIViewController",
         "printedName": "UIViewController",
@@ -35970,166 +37071,6 @@
             "printedName": "UITraitChangeObservable",
             "usr": "s:5UIKit23UITraitChangeObservableP",
             "mangledName": "$s5UIKit23UITraitChangeObservableP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "UIDevice",
-        "printedName": "UIDevice",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "modelName",
-            "printedName": "modelName",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:So8UIDeviceC5HyBidE9modelNameSSvpZ",
-            "mangledName": "$sSo8UIDeviceC5HyBidE9modelNameSSvpZ",
-            "moduleName": "HyBid",
-            "static": true,
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "Preconcurrency",
-              "Custom"
-            ],
-            "isFromExtension": true,
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:So8UIDeviceC5HyBidE9modelNameSSvgZ",
-                "mangledName": "$sSo8UIDeviceC5HyBidE9modelNameSSvgZ",
-                "moduleName": "HyBid",
-                "static": true,
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "isFromExtension": true,
-                "accessorKind": "get"
-              }
-            ]
-          }
-        ],
-        "declKind": "Class",
-        "usr": "c:objc(cs)UIDevice",
-        "moduleName": "UIKit",
-        "isOpen": true,
-        "intro_iOS": "2.0",
-        "objc_name": "UIDevice",
-        "declAttributes": [
-          "Preconcurrency",
-          "Available",
-          "ObjC",
-          "NonSendable",
-          "Custom",
-          "Dynamic"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "isExternal": true,
-        "inheritsConvenienceInitializers": true,
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
           }
         ]
       },
@@ -36851,1311 +37792,429 @@
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 2342,
+      "offset": 2351,
       "length": 7,
       "value": "\"Apple\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 2496,
+      "offset": 2505,
       "length": 3,
       "value": "\"4\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 2538,
+      "offset": 2547,
       "length": 3,
       "value": "\"5\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 2579,
+      "offset": 2588,
       "length": 3,
       "value": "\"3\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 2625,
+      "offset": 2634,
       "length": 4,
       "value": "\"-1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 2676,
+      "offset": 2685,
       "length": 4,
       "value": "\"-1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 2719,
+      "offset": 2728,
       "length": 3,
       "value": "\"2\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 2764,
+      "offset": 2773,
       "length": 4,
       "value": "\"-1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 2814,
+      "offset": 2823,
       "length": 4,
       "value": "\"-1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 3496,
+      "offset": 3505,
       "length": 6,
       "value": "\"%.3f\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 3830,
+      "offset": 3839,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 5165,
+      "offset": 5174,
       "length": 14,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 5172,
+      "offset": 5181,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 5178,
+      "offset": 5187,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 5422,
+      "offset": 5431,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 5834,
+      "offset": 5843,
       "length": 6,
       "value": "\"%.0f\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 5972,
+      "offset": 5981,
       "length": 6,
       "value": "\"%.0f\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 7338,
+      "offset": 7347,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 7361,
+      "offset": 7370,
       "length": 3,
       "value": "\"0\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 7390,
+      "offset": 7399,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 7873,
+      "offset": 7882,
       "length": 28,
       "value": "\"CFBundleShortVersionString\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 8027,
+      "offset": 8036,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 8186,
+      "offset": 8195,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 8234,
+      "offset": 8243,
       "length": 3,
       "value": "\"0\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 8358,
+      "offset": 8367,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 8427,
+      "offset": 8436,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 8479,
+      "offset": 8488,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 8483,
+      "offset": 8492,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 8505,
+      "offset": 8514,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 8522,
+      "offset": 8531,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 8526,
+      "offset": 8535,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 8549,
+      "offset": 8558,
       "length": 3,
       "value": "\"2\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 8566,
+      "offset": 8575,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 8571,
+      "offset": 8580,
       "length": 2,
       "value": "25"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 8594,
+      "offset": 8603,
       "length": 3,
       "value": "\"3\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 8611,
+      "offset": 8620,
       "length": 2,
       "value": "25"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 8616,
+      "offset": 8625,
       "length": 2,
       "value": "40"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 8639,
+      "offset": 8648,
       "length": 3,
       "value": "\"4\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 8656,
+      "offset": 8665,
       "length": 2,
       "value": "40"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 8661,
+      "offset": 8670,
       "length": 2,
       "value": "55"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 8684,
+      "offset": 8693,
       "length": 3,
       "value": "\"5\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 8701,
+      "offset": 8710,
       "length": 2,
       "value": "55"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 8706,
+      "offset": 8715,
       "length": 2,
       "value": "70"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 8729,
+      "offset": 8738,
       "length": 3,
       "value": "\"6\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 8746,
+      "offset": 8755,
       "length": 2,
       "value": "70"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 8751,
+      "offset": 8760,
       "length": 2,
       "value": "85"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 8774,
+      "offset": 8783,
       "length": 3,
       "value": "\"7\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 8791,
+      "offset": 8800,
       "length": 2,
       "value": "85"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 8796,
+      "offset": 8805,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 8820,
+      "offset": 8829,
       "length": 3,
       "value": "\"8\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 8994,
+      "offset": 9003,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 9000,
+      "offset": 9009,
       "length": 3,
       "value": "\"0\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 9573,
+      "offset": 9582,
       "length": 24,
       "value": "\"https:\/\/api.ipify.org\/\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 10135,
+      "offset": 10144,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 10141,
+      "offset": 10150,
       "length": 3,
       "value": "\"0\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 10539,
+      "offset": 10548,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 10545,
+      "offset": 10554,
       "length": 3,
       "value": "\"0\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 10835,
+      "offset": 10844,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "BooleanLiteral",
-      "offset": 11094,
+      "offset": 11103,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "StringLiteral",
-      "offset": 11351,
+      "offset": 11370,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
       "kind": "IntegerLiteral",
-      "offset": 11437,
+      "offset": 11462,
       "length": 1,
       "value": "0"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 11647,
-      "length": 9,
-      "value": "\"iPod5,1\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 11697,
-      "length": 14,
-      "value": "\"iPod Touch 5\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 11723,
-      "length": 9,
-      "value": "\"iPod7,1\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 11773,
-      "length": 14,
-      "value": "\"iPod Touch 6\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 11799,
-      "length": 11,
-      "value": "\"iPhone3,1\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 11812,
-      "length": 11,
-      "value": "\"iPhone3,2\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 11825,
-      "length": 11,
-      "value": "\"iPhone3,3\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 11849,
-      "length": 10,
-      "value": "\"iPhone 4\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 11871,
-      "length": 11,
-      "value": "\"iPhone4,1\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 11921,
-      "length": 11,
-      "value": "\"iPhone 4s\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 11944,
-      "length": 11,
-      "value": "\"iPhone5,1\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 11957,
-      "length": 11,
-      "value": "\"iPhone5,2\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 11994,
-      "length": 10,
-      "value": "\"iPhone 5\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12016,
-      "length": 11,
-      "value": "\"iPhone5,3\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12029,
-      "length": 11,
-      "value": "\"iPhone5,4\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12066,
-      "length": 11,
-      "value": "\"iPhone 5c\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12089,
-      "length": 11,
-      "value": "\"iPhone6,1\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12102,
-      "length": 11,
-      "value": "\"iPhone6,2\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12139,
-      "length": 11,
-      "value": "\"iPhone 5s\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12162,
-      "length": 11,
-      "value": "\"iPhone7,2\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12212,
-      "length": 10,
-      "value": "\"iPhone 6\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12234,
-      "length": 11,
-      "value": "\"iPhone7,1\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12284,
-      "length": 15,
-      "value": "\"iPhone 6 Plus\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12311,
-      "length": 11,
-      "value": "\"iPhone8,1\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12361,
-      "length": 11,
-      "value": "\"iPhone 6s\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12384,
-      "length": 11,
-      "value": "\"iPhone8,2\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12434,
-      "length": 16,
-      "value": "\"iPhone 6s Plus\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12462,
-      "length": 11,
-      "value": "\"iPhone9,1\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12475,
-      "length": 11,
-      "value": "\"iPhone9,3\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12512,
-      "length": 10,
-      "value": "\"iPhone 7\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12534,
-      "length": 11,
-      "value": "\"iPhone9,2\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12547,
-      "length": 11,
-      "value": "\"iPhone9,4\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12584,
-      "length": 15,
-      "value": "\"iPhone 7 Plus\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12611,
-      "length": 11,
-      "value": "\"iPhone8,4\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12661,
-      "length": 11,
-      "value": "\"iPhone SE\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12684,
-      "length": 12,
-      "value": "\"iPhone10,1\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12698,
-      "length": 12,
-      "value": "\"iPhone10,4\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12734,
-      "length": 10,
-      "value": "\"iPhone 8\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12756,
-      "length": 12,
-      "value": "\"iPhone10,2\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12770,
-      "length": 12,
-      "value": "\"iPhone10,5\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12806,
-      "length": 15,
-      "value": "\"iPhone 8 Plus\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12833,
-      "length": 12,
-      "value": "\"iPhone10,3\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12847,
-      "length": 12,
-      "value": "\"iPhone10,6\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12883,
-      "length": 10,
-      "value": "\"iPhone X\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12905,
-      "length": 12,
-      "value": "\"iPhone11,2\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12955,
-      "length": 11,
-      "value": "\"iPhone XS\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12978,
-      "length": 12,
-      "value": "\"iPhone11,4\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 12992,
-      "length": 12,
-      "value": "\"iPhone11,6\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13028,
-      "length": 15,
-      "value": "\"iPhone XS Max\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13055,
-      "length": 12,
-      "value": "\"iPhone11,8\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13105,
-      "length": 11,
-      "value": "\"iPhone XR\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13128,
-      "length": 9,
-      "value": "\"iPad2,1\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13139,
-      "length": 9,
-      "value": "\"iPad2,2\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13150,
-      "length": 9,
-      "value": "\"iPad2,3\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13161,
-      "length": 9,
-      "value": "\"iPad2,4\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13178,
-      "length": 8,
-      "value": "\"iPad 2\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13198,
-      "length": 9,
-      "value": "\"iPad3,1\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13209,
-      "length": 9,
-      "value": "\"iPad3,2\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13220,
-      "length": 9,
-      "value": "\"iPad3,3\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13248,
-      "length": 8,
-      "value": "\"iPad 3\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13268,
-      "length": 9,
-      "value": "\"iPad3,4\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13279,
-      "length": 9,
-      "value": "\"iPad3,5\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13290,
-      "length": 9,
-      "value": "\"iPad3,6\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13318,
-      "length": 8,
-      "value": "\"iPad 4\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13338,
-      "length": 9,
-      "value": "\"iPad4,1\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13349,
-      "length": 9,
-      "value": "\"iPad4,2\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13360,
-      "length": 9,
-      "value": "\"iPad4,3\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13388,
-      "length": 10,
-      "value": "\"iPad Air\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13410,
-      "length": 9,
-      "value": "\"iPad5,3\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13421,
-      "length": 9,
-      "value": "\"iPad5,4\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13460,
-      "length": 12,
-      "value": "\"iPad Air 2\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13484,
-      "length": 10,
-      "value": "\"iPad6,11\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13496,
-      "length": 10,
-      "value": "\"iPad6,12\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13534,
-      "length": 8,
-      "value": "\"iPad 5\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13554,
-      "length": 9,
-      "value": "\"iPad7,5\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13565,
-      "length": 9,
-      "value": "\"iPad7,6\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13604,
-      "length": 8,
-      "value": "\"iPad 6\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13624,
-      "length": 9,
-      "value": "\"iPad2,5\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13635,
-      "length": 9,
-      "value": "\"iPad2,6\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13646,
-      "length": 9,
-      "value": "\"iPad2,7\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13674,
-      "length": 11,
-      "value": "\"iPad Mini\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13697,
-      "length": 9,
-      "value": "\"iPad4,4\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13708,
-      "length": 9,
-      "value": "\"iPad4,5\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13719,
-      "length": 9,
-      "value": "\"iPad4,6\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13747,
-      "length": 13,
-      "value": "\"iPad Mini 2\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13772,
-      "length": 9,
-      "value": "\"iPad4,7\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13783,
-      "length": 9,
-      "value": "\"iPad4,8\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13794,
-      "length": 9,
-      "value": "\"iPad4,9\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13822,
-      "length": 13,
-      "value": "\"iPad Mini 3\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13847,
-      "length": 9,
-      "value": "\"iPad5,1\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13858,
-      "length": 9,
-      "value": "\"iPad5,2\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13897,
-      "length": 13,
-      "value": "\"iPad Mini 4\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13922,
-      "length": 9,
-      "value": "\"iPad6,3\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13933,
-      "length": 9,
-      "value": "\"iPad6,4\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 13972,
-      "length": 21,
-      "value": "\"iPad Pro (9.7-inch)\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14005,
-      "length": 9,
-      "value": "\"iPad6,7\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14016,
-      "length": 9,
-      "value": "\"iPad6,8\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14055,
-      "length": 22,
-      "value": "\"iPad Pro (12.9-inch)\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14089,
-      "length": 9,
-      "value": "\"iPad7,1\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14100,
-      "length": 9,
-      "value": "\"iPad7,2\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14139,
-      "length": 39,
-      "value": "\"iPad Pro (12.9-inch) (2nd generation)\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14190,
-      "length": 9,
-      "value": "\"iPad7,3\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14201,
-      "length": 9,
-      "value": "\"iPad7,4\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14240,
-      "length": 22,
-      "value": "\"iPad Pro (10.5-inch)\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14274,
-      "length": 9,
-      "value": "\"iPad8,1\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14285,
-      "length": 9,
-      "value": "\"iPad8,2\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14296,
-      "length": 9,
-      "value": "\"iPad8,3\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14307,
-      "length": 9,
-      "value": "\"iPad8,4\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14324,
-      "length": 20,
-      "value": "\"iPad Pro (11-inch)\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14356,
-      "length": 9,
-      "value": "\"iPad8,5\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14367,
-      "length": 9,
-      "value": "\"iPad8,6\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14378,
-      "length": 9,
-      "value": "\"iPad8,7\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14389,
-      "length": 9,
-      "value": "\"iPad8,8\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14406,
-      "length": 39,
-      "value": "\"iPad Pro (12.9-inch) (3rd generation)\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14457,
-      "length": 12,
-      "value": "\"AppleTV5,3\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14507,
-      "length": 10,
-      "value": "\"Apple TV\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14529,
-      "length": 12,
-      "value": "\"AppleTV6,2\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14579,
-      "length": 13,
-      "value": "\"Apple TV 4K\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14604,
-      "length": 19,
-      "value": "\"AudioAccessory1,1\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14654,
-      "length": 9,
-      "value": "\"HomePod\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14675,
-      "length": 6,
-      "value": "\"i386\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14683,
-      "length": 8,
-      "value": "\"x86_64\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14725,
-      "length": 104,
-      "value": "\"Simulator \""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14788,
-      "length": 28,
-      "value": "\"SIMULATOR_MODEL_IDENTIFIER\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14821,
-      "length": 5,
-      "value": "\"iOS\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSettings.swift",
-      "kind": "StringLiteral",
-      "offset": 14828,
-      "length": 1,
-      "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidLocalization.swift",
@@ -38187,87 +38246,80 @@
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSKAdNetworkViewController.swift",
-      "kind": "Dictionary",
-      "offset": 208,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSKAdNetworkViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 315,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSKAdNetworkViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 374,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSKAdNetworkViewController.swift",
       "kind": "FloatLiteral",
-      "offset": 416,
+      "offset": 199,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSKAdNetworkViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 466,
+      "offset": 249,
       "length": 2,
       "value": "35"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSKAdNetworkViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 512,
+      "offset": 295,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSKAdNetworkViewController.swift",
       "kind": "IntegerLiteral",
-      "offset": 557,
+      "offset": 340,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSKAdNetworkViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 378,
+      "length": 75,
+      "value": "\"Suppressing an attempt to manual\/auto click when task is not finished yet\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSKAdNetworkViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 835,
+      "offset": 629,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSKAdNetworkViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1325,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSKAdNetworkViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 738,
+      "offset": 15309,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSKAdNetworkViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 906,
+      "offset": 15388,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSKAdNetworkViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 1074,
-      "length": 5,
-      "value": "false"
+      "offset": 15419,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidSKAdNetworkViewController.swift",
-      "kind": "BooleanLiteral",
-      "offset": 6866,
-      "length": 5,
-      "value": "false"
+      "kind": "StringLiteral",
+      "offset": 17162,
+      "length": 4,
+      "value": "\"%@\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/AAK\/HyBidAdAttributionCustomClickAdsWrapper.swift",
@@ -38445,6 +38497,27 @@
       "value": "\"\""
     },
     {
+      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidSessionManager.swift",
+      "kind": "StringLiteral",
+      "offset": 480,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidSessionManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 537,
+      "length": 2,
+      "value": "30"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidSessionManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 542,
+      "length": 2,
+      "value": "60"
+    },
+    {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Config\/HyBidConsentConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 315,
@@ -38532,237 +38605,237 @@
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "StringLiteral",
       "offset": 279,
-      "length": 7,
-      "value": "\"1.6.3\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 335,
-      "length": 13,
-      "value": "\"3.9.3-beta2\""
-    },
-    {
-      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
-      "kind": "StringLiteral",
-      "offset": 398,
       "length": 8,
-      "value": "\"23.2.2\""
+      "value": "\"1.6.10\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "StringLiteral",
-      "offset": 460,
+      "offset": 336,
+      "length": 14,
+      "value": "\"3.10.0-beta1\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 400,
+      "length": 8,
+      "value": "\"23.2.3\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 462,
       "length": 14,
       "value": "\"NGSDK\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "StringLiteral",
-      "offset": 529,
+      "offset": 531,
       "length": 8,
       "value": "\"Smaato\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "StringLiteral",
-      "offset": 589,
+      "offset": 591,
       "length": 7,
-      "value": "\"1.6.3\""
+      "value": "\"1.6.7\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "StringLiteral",
-      "offset": 645,
+      "offset": 647,
       "length": 19,
       "value": "\"rendering success\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "StringLiteral",
-      "offset": 711,
+      "offset": 713,
       "length": 17,
       "value": "\"ad_session_data\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "StringLiteral",
-      "offset": 775,
+      "offset": 777,
       "length": 16,
       "value": "\"percentVisible\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "StringLiteral",
-      "offset": 844,
+      "offset": 846,
       "length": 7,
       "value": "\"vrvdl\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "StringLiteral",
-      "offset": 904,
+      "offset": 906,
       "length": 13,
       "value": "\"deeplinkUrl\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "StringLiteral",
-      "offset": 970,
+      "offset": 972,
       "length": 13,
       "value": "\"fallbackUrl\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 1058,
+      "offset": 1060,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 1111,
+      "offset": 1113,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 1170,
+      "offset": 1172,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "StringLiteral",
-      "offset": 1238,
+      "offset": 1240,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 1424,
+      "offset": 1426,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 1488,
+      "offset": 1490,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 1649,
+      "offset": 1651,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 1813,
+      "offset": 1815,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 1970,
+      "offset": 1972,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 2140,
+      "offset": 2142,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 2287,
+      "offset": 2289,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 2439,
+      "offset": 2441,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 2707,
+      "offset": 2709,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 2857,
+      "offset": 2859,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 2922,
+      "offset": 2924,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 3205,
+      "offset": 3207,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 3271,
+      "offset": 3273,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 3397,
+      "offset": 3399,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "BooleanLiteral",
-      "offset": 3533,
+      "offset": 3535,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 3747,
+      "offset": 3749,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 3805,
+      "offset": 3807,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidConstants.swift",
       "kind": "IntegerLiteral",
-      "offset": 3870,
+      "offset": 3872,
       "length": 1,
       "value": "0"
     },
@@ -38979,14 +39052,14 @@
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Custom CTA\/HyBidCustomCTAView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1520,
+      "offset": 1490,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Custom CTA\/HyBidCustomCTAView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1620,
+      "offset": 1590,
       "length": 5,
       "value": "false"
     },
@@ -39644,611 +39717,702 @@
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 2195,
+      "offset": 2118,
+      "length": 18,
+      "value": "\"is_auto_storekit\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
+      "kind": "StringLiteral",
+      "offset": 2261,
       "length": 9,
       "value": "\"request\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 2246,
+      "offset": 2312,
       "length": 12,
       "value": "\"impression\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 2305,
+      "offset": 2371,
       "length": 17,
       "value": "\"omid_impression\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 2359,
+      "offset": 2425,
       "length": 7,
       "value": "\"click\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 2403,
+      "offset": 2469,
       "length": 7,
       "value": "\"error\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 2461,
+      "offset": 2527,
       "length": 21,
       "value": "\"interstitial_closed\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 2529,
+      "offset": 2595,
       "length": 17,
       "value": "\"rewarded_closed\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 2591,
+      "offset": 2657,
       "length": 15,
       "value": "\"video_started\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 2653,
+      "offset": 2719,
       "length": 17,
       "value": "\"video_dismissed\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 2712,
+      "offset": 2778,
       "length": 12,
       "value": "\"video_mute\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 2768,
+      "offset": 2834,
       "length": 14,
       "value": "\"video_unmute\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 2836,
+      "offset": 2902,
       "length": 21,
       "value": "\"session_initialized\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 2906,
+      "offset": 2972,
       "length": 16,
       "value": "\"session_loaded\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 2972,
+      "offset": 3038,
       "length": 17,
       "value": "\"session_started\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 3039,
+      "offset": 3105,
       "length": 17,
       "value": "\"session_stopped\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 3111,
+      "offset": 3177,
       "length": 16,
       "value": "\"first_quartile\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 3176,
+      "offset": 3242,
       "length": 10,
       "value": "\"midpoint\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 3241,
+      "offset": 3307,
       "length": 16,
       "value": "\"third_quartile\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 3306,
+      "offset": 3372,
       "length": 13,
       "value": "\"ad_complete\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 3365,
+      "offset": 3431,
       "length": 13,
       "value": "\"video_pause\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 3425,
+      "offset": 3491,
       "length": 14,
       "value": "\"video_resume\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 3492,
+      "offset": 3558,
       "length": 14,
       "value": "\"buffer_start\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 3560,
+      "offset": 3626,
       "length": 15,
       "value": "\"buffer_finish\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 3629,
+      "offset": 3695,
       "length": 15,
       "value": "\"volume_change\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 3692,
+      "offset": 3758,
       "length": 9,
       "value": "\"skipped\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 3749,
+      "offset": 3815,
       "length": 9,
       "value": "\"clicked\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 3794,
+      "offset": 3860,
       "length": 6,
       "value": "\"load\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 3841,
+      "offset": 3907,
       "length": 11,
       "value": "\"load_fail\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 3888,
+      "offset": 3954,
       "length": 6,
       "value": "\"show\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 3932,
+      "offset": 3998,
       "length": 14,
       "value": "\"video_replay\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 3983,
+      "offset": 4049,
       "length": 7,
       "value": "\"cache\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 4030,
+      "offset": 4096,
       "length": 10,
       "value": "\"response\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 4078,
+      "offset": 4144,
       "length": 8,
       "value": "\"render\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 4130,
+      "offset": 4196,
       "length": 14,
       "value": "\"render_error\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 4190,
+      "offset": 4256,
       "length": 16,
       "value": "\"companion_view\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 4244,
+      "offset": 4310,
       "length": 8,
       "value": "\"reward\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 4303,
+      "offset": 4369,
       "length": 21,
       "value": "\"session_report_info\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 4381,
+      "offset": 4447,
       "length": 27,
       "value": "\"custom_endcard_impression\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 4471,
+      "offset": 4537,
       "length": 33,
       "value": "\"custom_endcard_impression_error\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 4556,
+      "offset": 4622,
       "length": 25,
       "value": "\"default_endcard_skipped\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 4635,
+      "offset": 4701,
       "length": 24,
       "value": "\"default_endcard_closed\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 4718,
+      "offset": 4784,
       "length": 28,
       "value": "\"default_endcard_impression\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 4811,
+      "offset": 4877,
       "length": 34,
       "value": "\"default_endcard_impression_error\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 4899,
+      "offset": 4965,
       "length": 23,
       "value": "\"default_endcard_click\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 4975,
+      "offset": 5041,
       "length": 23,
       "value": "\"custom_endcard_closed\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 5050,
+      "offset": 5116,
       "length": 22,
       "value": "\"custom_endcard_click\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 5125,
+      "offset": 5191,
       "length": 17,
       "value": "\"custom_cta_show\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 5190,
+      "offset": 5256,
       "length": 18,
       "value": "\"custom_cta_click\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 5264,
+      "offset": 5330,
       "length": 26,
       "value": "\"custom_cta_endcard_click\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 5342,
+      "offset": 5408,
       "length": 22,
       "value": "\"skoverlay_impression\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 5422,
+      "offset": 5488,
       "length": 28,
       "value": "\"skoverlay_impression_error\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 5511,
+      "offset": 5577,
       "length": 31,
       "value": "\"storekit_product_view_dismiss\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 5598,
+      "offset": 5664,
       "length": 26,
       "value": "\"storekit_automatic_click\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 5696,
+      "offset": 5762,
       "length": 42,
       "value": "\"storekit_automatic_default_endcard_click\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 5809,
+      "offset": 5875,
       "length": 41,
       "value": "\"storekit_automatic_custom_endcard_click\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 5907,
+      "offset": 5973,
       "length": 27,
       "value": "\"skoverlay_automatic_click\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 6007,
+      "offset": 6073,
       "length": 43,
       "value": "\"skoverlay_automatic_default_endcard_click\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 6122,
+      "offset": 6188,
       "length": 42,
       "value": "\"skoverlay_automatic_custom_endcard_click\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 6221,
+      "offset": 6287,
       "length": 25,
       "value": "\"autostorekit_impression\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 6309,
+      "offset": 6375,
       "length": 31,
       "value": "\"autostorekit_impression_error\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 6409,
+      "offset": 6465,
+      "length": 29,
+      "value": "\"storekit_presentation_error\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
+      "kind": "StringLiteral",
+      "offset": 6545,
+      "length": 21,
+      "value": "\"storekit_load_error\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
+      "kind": "StringLiteral",
+      "offset": 6623,
+      "length": 27,
+      "value": "\"storekit_click_suppressed\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
+      "kind": "StringLiteral",
+      "offset": 6719,
       "length": 11,
       "value": "\"[aakType]\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 6485,
+      "offset": 6795,
       "length": 56,
       "value": "\"aak_app_impression_\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 6540,
+      "offset": 6850,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 6612,
+      "offset": 6922,
       "length": 62,
       "value": "\"aak_app_impression_error_\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 6673,
+      "offset": 6983,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 6739,
+      "offset": 7049,
       "length": 20,
       "value": "\"aak_app_handle_tap\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 6830,
+      "offset": 7140,
       "length": 26,
       "value": "\"aak_app_handle_tap_error\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 6932,
+      "offset": 7242,
       "length": 31,
       "value": "\"aak_app_impression_begin_view\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 7045,
+      "offset": 7355,
       "length": 37,
       "value": "\"aak_app_impression_begin_view_error\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 7156,
+      "offset": 7466,
       "length": 29,
       "value": "\"aak_app_impression_end_view\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 7265,
+      "offset": 7575,
       "length": 35,
       "value": "\"aak_app_impression_end_view_error\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 7437,
+      "offset": 7747,
       "length": 10,
       "value": "\"standard\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 7484,
+      "offset": 7794,
       "length": 7,
       "value": "\"video\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 7613,
+      "offset": 7923,
       "length": 8,
       "value": "\"native\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 7659,
+      "offset": 7969,
       "length": 8,
       "value": "\"banner\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 7709,
+      "offset": 8019,
       "length": 12,
       "value": "\"fullscreen\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 7761,
+      "offset": 8071,
       "length": 10,
       "value": "\"rewarded\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 7898,
+      "offset": 8208,
       "length": 9,
       "value": "\"beacons\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 7946,
+      "offset": 8256,
       "length": 9,
       "value": "\"onTopOf\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 8080,
+      "offset": 8390,
       "length": 10,
       "value": "\"PN_click\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 8132,
+      "offset": 8442,
       "length": 15,
       "value": "\"PN_impression\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 8204,
+      "offset": 8514,
       "length": 30,
       "value": "\"PN_custom_endcard_impression\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 8286,
+      "offset": 8596,
       "length": 25,
       "value": "\"PN_custom_endcard_click\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 8451,
+      "offset": 8761,
       "length": 12,
       "value": "\"Impression\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 8518,
+      "offset": 8828,
       "length": 23,
       "value": "\"CompanionClickThrough\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 8587,
+      "offset": 8897,
       "length": 15,
       "value": "\"ClickTracking\""
     },
     {
       "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
       "kind": "StringLiteral",
-      "offset": 8642,
+      "offset": 8968,
+      "length": 24,
+      "value": "\"CompanionClickTracking\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/Analytics\/HyBidReportingProperties.swift",
+      "kind": "StringLiteral",
+      "offset": 9032,
       "length": 10,
       "value": "\"Progress\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidImageLoader.swift",
+      "kind": "StringLiteral",
+      "offset": 194,
+      "length": 23,
+      "value": "\"HyBidImageLoaderError\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidImageLoader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 605,
+      "length": 4,
+      "value": "1024"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidImageLoader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 612,
+      "length": 4,
+      "value": "1024"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidImageLoader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 663,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidImageLoader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 667,
+      "length": 4,
+      "value": "1024"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidImageLoader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 674,
+      "length": 4,
+      "value": "1024"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidImageLoader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 803,
+      "length": 4,
+      "value": "4096"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ngsdk-ios-sdk\/ngsdk-ios-sdk\/NGSDK\/NGSDK\/Core\/Swift\/HyBidImageLoader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 810,
+      "length": 4,
+      "value": "4096"
     }
   ]
 }

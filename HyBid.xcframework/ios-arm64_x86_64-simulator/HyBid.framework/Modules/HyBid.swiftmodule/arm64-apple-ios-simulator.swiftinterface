@@ -11,6 +11,7 @@ import CoreLocation
 import CoreTelephony
 import Foundation
 @_exported import HyBid
+import ImageIO
 import Network
 import StoreKit
 import Swift
@@ -255,9 +256,6 @@ extension HyBidMRAIDCloseCardView : HyBidContentInfoViewDelegate {
   }
   @objc deinit
 }
-extension UIKit.UIDevice {
-  @_Concurrency.MainActor @preconcurrency public static let modelName: Swift.String
-}
 public typealias ReportingKey = Swift.String
 @objc public class HyBidReportingEvent : ObjectiveC.NSObject {
   @objc public var properties: [ReportingKey : Any]?
@@ -271,13 +269,15 @@ public typealias ReportingKey = Swift.String
   @objc public static let shared: HyBidSKAdNetworkViewController
   public var isStoreKitViewPresented: Swift.Bool {
     get
-    set
   }
   @objc public var avoidAutoStoreKitPresentationAfterReplay: Swift.Bool
   @objc public func presentStoreKitView(productParameters: Swift.Dictionary<Swift.String, Any>, adFormat: Swift.String, isAutoStoreKitView: Swift.Bool, ad: HyBidAd, rootViewController: UIKit.UIViewController)
   @objc public func presentStoreKitView(productParameters: Swift.Dictionary<Swift.String, Any>, adFormat: Swift.String, isAutoStoreKitView: Swift.Bool, ad: HyBidAd)
+  @objc public func reportSuppressedClick(adFormat: Swift.String, isAutoStoreKitView: Swift.Bool, ad: HyBidAd?)
   @objc public func isSKProductViewControllerPresented() -> Swift.Bool
+  @available(*, deprecated, message: "Use cancelStoreKitRequest(for:) when the ad closes")
   @objc public func resetStoreKitPresentationState()
+  @objc(cancelStoreKitRequestForAd:) public func cancelStoreKitRequest(for ad: HyBidAd?)
   @objc override dynamic public init()
   @objc deinit
 }
@@ -351,10 +351,12 @@ extension StoreKit.SKStoreProductViewController {
   @objc public var safeImpressionCounter: [Swift.String : Swift.Int] {
     @objc get
   }
+  @objc public func impressionDepth(zoneID: Swift.String?) -> Swift.Int
   @objc public func setStartSession()
-  @objc public func updateSession(zoneID: Swift.String)
-  @objc public func incrementImpressionCounter(zoneID: Swift.String)
-  @objc public func sessionDuration(zoneID: Swift.String)
+  @objc public func refreshSession()
+  @objc public func updateSession(zoneID: Swift.String?)
+  @objc public func incrementImpressionCounter(zoneID: Swift.String?)
+  @objc public func sessionDuration(zoneID: Swift.String?)
   @objc public func setAgeOfAppSinceCreated()
   @objc public func getAgeOfApp() -> Swift.String
   @objc deinit
@@ -553,6 +555,7 @@ extension HyBidInterruptionHandler {
   public func productViewControllerWillShow()
   public func productViewControllerDidShow(isAutoStoreKitView: Swift.Bool, adFormat: Swift.String)
   public func productViewControllerDidFinish()
+  public func productViewControllerDidNotShow()
   @objc dynamic public func productViewControllerDidFail(error: any Swift.Error)
 }
 extension HyBidInterruptionHandler : HyBidAdFeedbackViewDelegate {
@@ -801,6 +804,7 @@ extension UIKit.UILabel {
   @objc public static let AGE_OF_APP: Swift.String
   @objc public static let BEACON_TYPE: Swift.String
   @objc public static let VAST_TRACKER_TYPE: Swift.String
+  @objc public static let IS_AUTO_STOREKIT: Swift.String
   @objc override dynamic public init()
   @objc deinit
 }
@@ -865,6 +869,9 @@ extension UIKit.UILabel {
   @objc public static let SKOVERLAY_AUTOMATIC_CUSTOM_ENDCARD_CLICK: Swift.String
   @objc public static let AUTO_STORE_KIT_IMPRESSION: Swift.String
   @objc public static let AUTO_STORE_KIT_IMPRESSION_ERROR: Swift.String
+  @objc public static let STOREKIT_PRESENTATION_ERROR: Swift.String
+  @objc public static let STOREKIT_LOAD_ERROR: Swift.String
+  @objc public static let STOREKIT_CLICK_SUPPRESSED: Swift.String
   @objc public static let AD_ATTRIBUTION_KIT_AD_TYPE_MACRO: Swift.String
   @objc public static let AD_ATTRIBUTION_KIT_APP_IMPRESSION: Swift.String
   @objc public static let AD_ATTRIBUTION_KIT_APP_IMPRESSION_ERROR: Swift.String
@@ -909,6 +916,7 @@ extension UIKit.UILabel {
   @objc public static let IMPRESSION: Swift.String
   @objc public static let COMPANION_CLICK_THROUGH: Swift.String
   @objc public static let CLICK_TRACKING: Swift.String
+  @objc public static let COMPANION_CLICK_TRACKING: Swift.String
   @objc public static let PROGRESS: Swift.String
   @objc override dynamic public init()
   @objc deinit
@@ -926,6 +934,20 @@ extension UIKit.UILabel {
   @objc public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, willPerformHTTPRedirection response: Foundation.HTTPURLResponse, newRequest request: Foundation.URLRequest, completionHandler: @escaping (Foundation.URLRequest?) -> Swift.Void)
   @objc public func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive response: Foundation.URLResponse, completionHandler: @escaping (Foundation.URLSession.ResponseDisposition) -> Swift.Void)
   @objc public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class HyBidImageLoader : ObjectiveC.NSObject {
+  @objc public static let iconMaximumByteCount: Swift.Int
+  @objc public static let imageMaximumByteCount: Swift.Int
+  @objc public static let maximumSourcePixelCount: CoreFoundation.CGFloat
+  @objc @discardableResult
+  public static func downloadData(from url: Foundation.URL, maximumByteCount: Swift.Int, completion: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void) -> Foundation.URLSessionDataTask
+  @objc @discardableResult
+  public static func downloadData(with request: Foundation.URLRequest, maximumByteCount: Swift.Int, completion: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void) -> Foundation.URLSessionDataTask
+  @objc public static func loadImage(from url: Foundation.URL, maximumByteCount: Swift.Int, maximumPixelSize: CoreFoundation.CGFloat, completion: @escaping (UIKit.UIImage?, (any Swift.Error)?) -> Swift.Void)
+  @objc public static func downsampledImage(with data: Foundation.Data, maximumPixelSize: CoreFoundation.CGFloat) -> UIKit.UIImage?
+  @objc public static func isSupportedImage(_ data: Foundation.Data) -> Swift.Bool
   @objc override dynamic public init()
   @objc deinit
 }

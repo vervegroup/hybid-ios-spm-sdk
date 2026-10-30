@@ -22,6 +22,7 @@
 - (NSString *)getOMIDJS;
 - (id)getAdEvents:(HyBidOMIDAdSessionWrapper *)omidAdSessionWrapper;
 - (id)getMediaEvents:(HyBidOMIDAdSessionWrapper *)omidAdSessionWrapper;
+- (id)getNativeDisplayAdSessionConfiguration;
 - (void)reportEvent:(NSString *)eventType;
 
 @end

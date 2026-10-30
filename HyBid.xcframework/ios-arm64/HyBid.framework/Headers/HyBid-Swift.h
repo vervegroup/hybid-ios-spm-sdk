@@ -472,6 +472,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 + (NSString * _Nonnull)BEACON_TYPE SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull VAST_TRACKER_TYPE;)
 + (NSString * _Nonnull)VAST_TRACKER_TYPE SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull IS_AUTO_STOREKIT;)
++ (NSString * _Nonnull)IS_AUTO_STOREKIT SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -606,6 +608,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 + (NSString * _Nonnull)AUTO_STORE_KIT_IMPRESSION SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull AUTO_STORE_KIT_IMPRESSION_ERROR;)
 + (NSString * _Nonnull)AUTO_STORE_KIT_IMPRESSION_ERROR SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull STOREKIT_PRESENTATION_ERROR;)
++ (NSString * _Nonnull)STOREKIT_PRESENTATION_ERROR SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull STOREKIT_LOAD_ERROR;)
++ (NSString * _Nonnull)STOREKIT_LOAD_ERROR SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull STOREKIT_CLICK_SUPPRESSED;)
++ (NSString * _Nonnull)STOREKIT_CLICK_SUPPRESSED SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull AD_ATTRIBUTION_KIT_AD_TYPE_MACRO;)
 + (NSString * _Nonnull)AD_ATTRIBUTION_KIT_AD_TYPE_MACRO SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull AD_ATTRIBUTION_KIT_APP_IMPRESSION;)
@@ -968,6 +976,27 @@ typedef SWIFT_ENUM_NAMED(NSInteger, HyBidGDPRk, "HyBidGDPRKeys", open) {
   HyBidGDPRkGPPID = 9,
 };
 
+@class NSURL;
+@class NSData;
+@class NSURLResponse;
+@class NSURLSessionDataTask;
+@class NSURLRequest;
+SWIFT_CLASS("_TtC5HyBid16HyBidImageLoader")
+@interface HyBidImageLoader : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger iconMaximumByteCount;)
++ (NSInteger)iconMaximumByteCount SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger imageMaximumByteCount;)
++ (NSInteger)imageMaximumByteCount SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) CGFloat maximumSourcePixelCount;)
++ (CGFloat)maximumSourcePixelCount SWIFT_WARN_UNUSED_RESULT;
++ (NSURLSessionDataTask * _Nonnull)downloadDataFrom:(NSURL * _Nonnull)url maximumByteCount:(NSInteger)maximumByteCount completion:(void (^ _Nonnull)(NSData * _Nullable, NSURLResponse * _Nullable, NSError * _Nullable))completion;
++ (NSURLSessionDataTask * _Nonnull)downloadDataWith:(NSURLRequest * _Nonnull)request maximumByteCount:(NSInteger)maximumByteCount completion:(void (^ _Nonnull)(NSData * _Nullable, NSURLResponse * _Nullable, NSError * _Nullable))completion;
++ (void)loadImageFrom:(NSURL * _Nonnull)url maximumByteCount:(NSInteger)maximumByteCount maximumPixelSize:(CGFloat)maximumPixelSize completion:(void (^ _Nonnull)(UIImage * _Nullable, NSError * _Nullable))completion;
++ (UIImage * _Nullable)downsampledImageWith:(NSData * _Nonnull)data maximumPixelSize:(CGFloat)maximumPixelSize SWIFT_WARN_UNUSED_RESULT;
++ (BOOL)isSupportedImage:(NSData * _Nonnull)data SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 SWIFT_CLASS("_TtC5HyBid24HyBidImpressionConstants")
 @interface HyBidImpressionConstants : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull PLACEMENT_POSITION_UNKNOWN;)
@@ -1026,10 +1055,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) HyBidInterru
 - (void)customEndCardWillShow;
 @end
 
-@interface HyBidInterruptionHandler (SWIFT_EXTENSION(HyBid))
-- (void)productViewControllerDidFailWithError:(NSError * _Nonnull)error;
-@end
-
 @interface HyBidInterruptionHandler (SWIFT_EXTENSION(HyBid)) <HyBidAdFeedbackViewDelegate>
 - (void)adFeedbackViewDidLoad;
 - (void)adFeedbackViewWillShow;
@@ -1038,7 +1063,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) HyBidInterru
 - (void)adFeedbackViewDidDismiss;
 @end
 
-@class NSData;
+@interface HyBidInterruptionHandler (SWIFT_EXTENSION(HyBid))
+- (void)productViewControllerDidFailWithError:(NSError * _Nonnull)error;
+@end
+
 @protocol HyBidInterstitialAdDelegate;
 SWIFT_CLASS("_TtC5HyBid19HyBidInterstitialAd")
 @interface HyBidInterstitialAd : NSObject
@@ -1277,8 +1305,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) HyBidSKAdNet
 @property (nonatomic) BOOL avoidAutoStoreKitPresentationAfterReplay;
 - (void)presentStoreKitViewWithProductParameters:(NSDictionary<NSString *, id> * _Nonnull)productParameters adFormat:(NSString * _Nonnull)adFormat isAutoStoreKitView:(BOOL)isAutoStoreKitView ad:(HyBidAd * _Nonnull)ad rootViewController:(UIViewController * _Nonnull)rootViewController;
 - (void)presentStoreKitViewWithProductParameters:(NSDictionary<NSString *, id> * _Nonnull)productParameters adFormat:(NSString * _Nonnull)adFormat isAutoStoreKitView:(BOOL)isAutoStoreKitView ad:(HyBidAd * _Nonnull)ad;
+- (void)reportSuppressedClickWithAdFormat:(NSString * _Nonnull)adFormat isAutoStoreKitView:(BOOL)isAutoStoreKitView ad:(HyBidAd * _Nullable)ad;
 - (BOOL)isSKProductViewControllerPresented SWIFT_WARN_UNUSED_RESULT;
-- (void)resetStoreKitPresentationState;
+- (void)resetStoreKitPresentationState SWIFT_DEPRECATED_MSG("Use cancelStoreKitRequest(for:) when the ad closes");
+- (void)cancelStoreKitRequestForAd:(HyBidAd * _Nullable)ad;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1301,10 +1331,13 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) HyBidSession
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, NSNumber *> * _Nonnull safeImpressionCounter;
+- (NSInteger)impressionDepthWithZoneID:(NSString * _Nullable)zoneID SWIFT_WARN_UNUSED_RESULT;
 - (void)setStartSession;
-- (void)updateSessionWithZoneID:(NSString * _Nonnull)zoneID;
-- (void)incrementImpressionCounterWithZoneID:(NSString * _Nonnull)zoneID;
-- (void)sessionDurationWithZoneID:(NSString * _Nonnull)zoneID;
+/// Applies the session boundary and refreshes <code>sessionDuration</code> before an ad request reads it.
+- (void)refreshSession;
+- (void)updateSessionWithZoneID:(NSString * _Nullable)zoneID;
+- (void)incrementImpressionCounterWithZoneID:(NSString * _Nullable)zoneID;
+- (void)sessionDurationWithZoneID:(NSString * _Nullable)zoneID;
 - (void)setAgeOfAppSinceCreated;
 - (NSString * _Nonnull)getAgeOfApp SWIFT_WARN_UNUSED_RESULT;
 @end
@@ -1427,9 +1460,6 @@ SWIFT_CLASS("_TtC5HyBid17HyBidTimeResolver")
 @class NSURLSession;
 @class NSURLSessionTask;
 @class NSHTTPURLResponse;
-@class NSURLRequest;
-@class NSURLSessionDataTask;
-@class NSURLResponse;
 SWIFT_CLASS("_TtC5HyBid18HyBidURLRedirector")
 @interface HyBidURLRedirector : NSObject <NSURLSessionDataDelegate>
 @property (nonatomic, weak) id <HyBidURLRedirectorDelegate> _Nullable delegate;
@@ -1509,6 +1539,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 + (NSString * _Nonnull)COMPANION_CLICK_THROUGH SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull CLICK_TRACKING;)
 + (NSString * _Nonnull)CLICK_TRACKING SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull COMPANION_CLICK_TRACKING;)
++ (NSString * _Nonnull)COMPANION_CLICK_TRACKING SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull PROGRESS;)
 + (NSString * _Nonnull)PROGRESS SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;

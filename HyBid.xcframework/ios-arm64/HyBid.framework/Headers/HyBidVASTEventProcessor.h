@@ -17,6 +17,18 @@ typedef NS_ENUM(NSInteger, HyBidVASTUrlType) {
     HyBidVASTErrorURL,
 };
 
+typedef NS_ENUM(NSInteger, HyBidVASTErrorCode) {
+    HyBidVASTErrorCodeXMLParse = 100,
+    HyBidVASTErrorCodeSchemaValidation = 101,
+    HyBidVASTErrorCodeWrapperLimitReached = 302,
+    HyBidVASTErrorCodeNoAdsAfterWrapper = 303,
+    HyBidVASTErrorCodeMediaFileNotFound = 401,
+    HyBidVASTErrorCodeMediaFileTimeout = 402,
+    HyBidVASTErrorCodeNoSupportedMediaFile = 403,
+    HyBidVASTErrorCodeMediaFileDisplayProblem = 405,
+    HyBidVASTErrorCodeUndefined = 900,
+};
+
 @protocol HyBidVASTEventProcessorDelegate <NSObject>
 
 - (void)eventProcessorDidTrackEventType:(HyBidVASTAdTrackingEventType)event;
@@ -39,6 +51,7 @@ typedef NS_ENUM(NSInteger, HyBidVASTUrlType) {
 - (void)sendVASTBeaconUrl:(NSString *)url withTrackingType:(NSString *)trackingType beaconName:(NSString *)beaconName;
 // sends the set of http requests to supplied URLs, used for Impressions, ClickTracking, and Errors.
 - (void)sendVASTUrls:(NSArray *)urls withType:(HyBidVASTUrlType)type;
+- (void)sendVASTErrorUrls:(NSArray *)urls withType:(HyBidVASTUrlType)type errorCode:(HyBidVASTErrorCode)errorCode;
 
 - (void)setCustomEvents:(NSArray<HyBidVASTTracking *> *)events;
 

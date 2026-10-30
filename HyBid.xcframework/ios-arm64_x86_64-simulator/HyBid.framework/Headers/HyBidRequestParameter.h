@@ -50,6 +50,7 @@
 + (NSString * _Nonnull)bundleId;
 + (NSString * _Nonnull)displayManager;
 + (NSString * _Nonnull)displayManagerVersion;
++ (NSString * _Nonnull)mediationAdUnitId;
 + (NSString * _Nonnull)width;
 + (NSString * _Nonnull)height;
 + (NSString * _Nonnull)usprivacy;
